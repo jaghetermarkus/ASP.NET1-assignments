@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Manrope:wght@200..800&family=Parisienne&family=Zeyada&display=swap");
+
+:root {
+  --font-manrope: "Manrope", sans-serif;
+
+  --font-header-h1: 40px;
+  --font-header-h2: 32px;
+  --font-header-h3: 28px;
+  --font-header-h4: 24px;
+  --font-header-h5: 20px;
+  --font-header-h6: 16px;
+
+  --font-display-d1: 80px;
+  --font-display-d2: 72px;
+  --font-display-d3: 64px;
+  --font-display-d4: 56px;
+  --font-display-d5: 48px;
+  --font-display-d6: 42px;
+
+  --font-body-lead: 24px;
+  --font-body-xl: 20px;
+  --font-body-l: 18px;
+  --font-body-m: 16px;
+  --font-body-s: 14px;
+  --font-body-xs: 12px;
+
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
+
+@mixin navigation {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-body-m);
+  color: var(--color-gray-800);
+  &:active,
+  &.active,
+  &:hover {
+    cursor: pointer;
+    color: var(--color-theme);
+  }
+}
+
+@mixin title-h2 {
+  font-size: var(--font-header-h3);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-900);
+  line-height: 130%;
+
+  @include sm {
+    font-size: var(--font-header-h2);
+  }
+  @include lg {
+    font-size: var(--font-header-h1);
+  }
+}
+
+@mixin title-h1 {
+  font-size: var(--font-header-h2);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-900);
+
+  @include md {
+    font-size: var(--font-display-d6);
+  }
+  @include lg {
+    font-size: var(--font-display-d6);
+  }
+  @include xl {
+    font-size: var(--font-display-d4);
+  }
+}
+
+@mixin title-h5 {
+  font-size: var(--font-header-h5);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-800);
+
+  @include md {
+    font-size: var(--font-display-d5);
+  }
+  @include lg {
+    font-size: var(--font-display-d5);
+  }
+  @include xl {
+    font-size: var(--font-display-d5);
+  }
+}
+
+@mixin form-title {
+  font-size: var(--font-header-h2);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-900);
+  margin-bottom: 2rem;
+}
+
+@mixin form-sub-title {
+  font-size: var(--font-header-h5);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-theme);
+}
+
+@mixin input-label {
+  font-size: var(--font-body-m);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  line-height: 160%;
+  // margin-top: 0.8rem;
+  margin-bottom: 0.25rem;
+}

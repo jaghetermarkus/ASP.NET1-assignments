@@ -1,0 +1,41 @@
+[
+  {
+    "CourseNumber": 1,
+    "Title": "Fullstack Web Developer Course from Scratch",
+    "IsBestSeller": true,
+    "IsDigital": true,
+    "Author": "Robert Fox",
+    "OriginalPrice": 12.5,
+    "DiscountPrice": 0,
+    "Hours": 220,
+    "LikesInProcent": 94,
+    "LikesInNumbers": 4200,
+    "CourseImageUrl": ""
+  },
+  {
+    "CourseNumber": 2,
+    "Title": "HTML, CSS, JavaScript Web Developer",
+    "IsBestSeller": false,
+    "IsDigital": true,
+    "Author": "Jenny Wilson",
+    "OriginalPrice": 15.99,
+    "DiscountPrice": 0,
+    "Hours": 160,
+    "LikesInProcent": 92,
+    "LikesInNumbers": 3100,
+    "CourseImageUrl": ""
+  },
+  {
+    "CourseNumber": 3,
+    "Title": "The Complete Front-End Web Development Course",
+    "IsBestSeller": false,
+    "IsDigital": true,
+    "Author": "Albert Flores",
+    "OriginalPrice": 44.99,
+    "DiscountPrice": 9.99,
+    "Hours": 100,
+    "LikesInProcent": 98,
+    "LikesInNumbers": 2700,
+    "CourseImageUrl": ""
+  }
+]

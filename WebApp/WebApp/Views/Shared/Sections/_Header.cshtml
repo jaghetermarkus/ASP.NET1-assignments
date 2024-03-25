@@ -1,0 +1,52 @@
+@inject SignInManager<UserEntity> SignInManager
+
+<header>
+    <div class="container">
+        <a class="logo" asp-action="Index" asp-controller="Default"><img src="~/images/logo-solid.svg" alt=""></a>
+
+        <nav>
+            <a class="menu-link " asp-action="Index" asp-controller="Default" >Overview</a>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <a class="menu-link courses" asp-action="Courses" asp-controller="Course" >Courses</a>
+            }
+            else
+            {
+                <a class="menu-link" asp-action="Index" asp-controller="Default" >Features</a>
+            }
+            <a class="menu-link contact" asp-action="Contact" asp-controller="Default" >Contact</a>
+        </nav>
+        
+        <div class="btn-switch">
+            <label>Light</label>
+            <label class="switch" for="switch-mode">
+                <input type="checkbox" id="switch-mode" class=".input-switch" />
+                <div class="slider round"></div>
+            </label>
+            <label>Dark</label>
+        </div>
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="profile-image" asp-action="Details" asp-controller="Account" >
+                <img src="/images/profile-picture.png" alt="profile picture" class="profile-picture">
+            </a>
+        }
+        else 
+        {
+            <div class="account-buttons">
+                <a class="btn-gray" asp-action="SignIn" asp-controller="Auth" >
+                    <i class="fa-regular fa-right-to-bracket"></i>
+                    <span>Sign In</span>
+                </a>
+
+                <a class="btn-theme" asp-action="SignUp" asp-controller="Auth" >
+                    <i class="fa-regular fa-user "></i>
+                    <span>Sign Up</span>
+                </a>
+            </div>
+        }
+
+        <button class="burger-menu"><i class="fa-regular fa-bars"></i></button>
+    </div>
+</header>

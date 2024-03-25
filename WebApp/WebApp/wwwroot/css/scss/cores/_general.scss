@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-manrope);
+  font-size: var(--font-body-m);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-white);
+  color: var(--color-grey-900);
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container {
+  width: 100%;
+}
+
+a {
+  color: var(--color-theme);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+  }
+}
+
+.path {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-600);
+  font-size: var(--font-body-s);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 2rem;
+  .fa-house {
+    margin-right: 0.25rem;
+  }
+  .fa-angles-right {
+    margin: 0 0.75rem;
+  }
+  .active-path {
+    color: var(--color-theme);
+  }
+}

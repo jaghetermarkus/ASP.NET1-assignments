@@ -1,0 +1,53 @@
+@model BasicInfoViewModel
+@{
+    ViewData["Title"] = "Basic Info";
+}
+<section class="basic-info settings-wrapper">
+    <div class="container-form">
+        <form method="post" asp-controller="Account" asp-action="BasicInfo" novalidate>
+            <h1 class="form-title">Account Details</h1>
+            <h5 class="form-sub-title">Basic Info</h5>
+
+            <div class="input-group-container">
+                <div class="input-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                
+                <div class="input-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="input-group-container">
+                <div class="input-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                
+                <div class="input-group">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label asp-for="Bio"></label>
+                <textarea asp-for="Bio"></textarea>
+                <span asp-validation-for="Bio"></span>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-gray cancel-btn" type="submit" >Cancel</button>
+                <button class="btn-theme save-changes-btn" type="submit" >Save changes</button>
+            </div>
+
+
+        </form>
+    </div>
+</section>

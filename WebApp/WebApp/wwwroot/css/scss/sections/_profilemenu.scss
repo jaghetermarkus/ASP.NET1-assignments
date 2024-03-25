@@ -1,0 +1,87 @@
+.profile-menu {
+  background-color: var(--color-white);
+  .container-profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 20rem;
+    margin: 2.5rem 7.6rem 0 0;
+    padding-right: 0.75rem;
+    border-right: 1px solid var(--color-gray-300);
+    height: 100%;
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .image-box {
+        padding-top: 2.5rem;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        .profile-picture {
+        }
+        i {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 0.75rem;
+          background-color: var(--color-white);
+          color: var(--color-gray-800);
+          rotate: -35deg;
+          border-radius: 50%;
+          border: 1px solid var(--color-gray-300);
+          box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+            0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+        }
+      }
+      h5 {
+        font-size: var(--font-header-h5);
+        font-weight: var(--font-weight-extrabold);
+        color: var(--color-gray-900);
+        margin: 1rem auto 0.25rem;
+      }
+      p {
+        font-size: var(--font-body-m);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-gray-700);
+      }
+    }
+
+    .account-navigation {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        @include navigation;
+        line-height: 160%;
+        padding: 0.75rem 1.5rem;
+        a {
+          text-decoration: none;
+          i {
+            color: var(--color-gray-600);
+            margin-right: 0.75rem;
+          }
+        }
+        .fa-arrow-right-from-bracket {
+          //   rotate: 180deg;
+        }
+        &.active {
+          background-color: var(--color-theme);
+          color: white;
+          border-radius: 0.5rem;
+          @include glow;
+          &:hover {
+            @include button-standard-hover;
+          }
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

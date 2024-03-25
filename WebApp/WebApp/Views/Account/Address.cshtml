@@ -1,0 +1,42 @@
+@model AddressViewModel
+@{
+    ViewData["Title"] = "Address";
+}
+<section class="account-address">
+    <div class="container-form">
+        <form method="post" asp-controller="Account" asp-action="Address">
+            <h5 class="form-sub-title">Address</h5>
+            
+            <div class="input-group settings-wrapper">
+                <label asp-for="Address1"></label>
+                <input asp-for="Address1">
+                <span asp-validation-for="Address1"></span>
+            </div>
+            
+            <div class="input-group">
+                <label asp-for="Address2"></label>
+                <input asp-for="Address2">
+                <span asp-validation-for="Address2"></span>
+            </div>
+            
+            <div class="input-group-container">
+                <div class="input-group">
+                    <label asp-for="Address1"></label>
+                    <input asp-for="Address1">
+                    <span asp-validation-for="Address1"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Address1"></label>
+                    <input asp-for="Address1">
+                    <span asp-validation-for="Address1"></span>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-gray cancel-btn" type="submit">Cancel</button>
+                <button class="btn-theme save-changes-btn" type="submit">Save changes</button>
+            </div>
+
+        </form>
+    </div>
+</section>

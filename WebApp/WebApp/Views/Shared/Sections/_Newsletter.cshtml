@@ -1,0 +1,68 @@
+@model NewsletterViewModel
+
+<section class="newsletter">
+    <div class="container-small">
+
+        <div class="newsletter-title-container">
+            <h2 class="newsletter-title">Don't Want to Miss Anything?</h2>
+            <img src="images/twisted-arrow.svg" alt="">
+        </div>
+
+        <form method="post">
+            <div class="newsletter-checkbox-container">
+                <h4 class="checkbox-title">Sign up for Newsletters</h4>
+                <div class="checkbox-div" >
+                    
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="DailyNewsletter" />
+                            <label asp-for="DailyNewsletter" ></label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="AdvertisingUpdates" checked />
+                            <label asp-for="AdvertisingUpdates" ></label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="WeekinReview" />
+                            <label asp-for="WeekinReview" ></label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="EventUpdates" />
+                            <label asp-for="EventUpdates" ></label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="StartupsWeekly" />
+                            <label asp-for="StartupsWeekly" ></label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="Podcasts" />
+                            <label asp-for="Podcasts" ></label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="newsletter-input-container">
+                <input type="text" class="newsletter-input" placeholder="Your Email">
+                <button class="newsletter-btn">Subscribe *</button>
+            </div>
+            <p class="newsletter-privacy"><span>* Yes, I agree to the <a href="" class="privacy-link">terms</a> and <a href="" class="privacy-link">privacy policy</a>.</span></p>
+        </form>
+
+    </div>
+</section>

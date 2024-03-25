@@ -1,0 +1,15 @@
+.settings-wrapper {
+  width: 100%;
+  background-color: var(--color-white);
+  .container-form {
+    form {
+      .btn-container {
+        display: flex;
+        gap: 1rem;
+        button {
+          max-width: fit-content;
+        }
+      }
+    }
+  }
+}

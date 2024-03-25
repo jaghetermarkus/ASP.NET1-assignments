@@ -1,0 +1,215 @@
+@mixin input {
+  padding: 0.8rem 2rem 0.8rem 1rem;
+  width: 100%;
+  font-family: var(--font-manrope);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-gray-700);
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    border-color: rgba(99, 102, 241, 0.35);
+    outline: none;
+    @include glow-input;
+  }
+
+  //   &::selection {
+  //     border-color: rgba(99, 102, 241, 0.35);
+  //   }
+}
+
+@mixin checkbox {
+  padding: 0;
+  position: relative;
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color-gray-100);
+  background-color: transparent;
+  border: 2px solid var(--color-gray-400);
+  color: var(--color-theme);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-gray-400);
+  }
+  &:checked {
+    background-color: var(--color-theme);
+    border-color: var(--color-theme);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 7px;
+    height: 13px;
+    border: 3px solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg) scale(1);
+  }
+  &:checked::before {
+    border-color: var(--color-white);
+  }
+}
+
+.settings-wrapper {
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+form {
+  display: grid;
+  width: 100%;
+  gap: 1.65rem;
+
+  h1 {
+    @include form-title;
+  }
+
+  h3 {
+    font-size: var(--font-header-h2);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-gray-900);
+  }
+
+  h4 {
+    font-size: var(--font-header-h5);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-gray-900);
+  }
+
+  h5 {
+    @include form-sub-title;
+  }
+
+  label {
+    @include input-label;
+  }
+  .input-group-container {
+    display: grid;
+    width: 100%;
+    gap: 1.5rem;
+    @include sm {
+      display: flex;
+      gap: 1.5rem;
+      align-items: start;
+      .input-group {
+        flex: 1;
+      }
+    }
+  }
+
+  .input-group {
+    position: relative;
+    display: grid;
+  }
+
+  .checkbox-group {
+    label {
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-body-m);
+      margin-bottom: 0;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @include input;
+  }
+
+  textarea {
+    resize: none;
+    height: 6.5rem;
+  }
+
+  input[type="checkbox"] {
+    @include checkbox;
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 1rem;
+    button {
+      max-width: fit-content;
+    }
+  }
+
+  .input-validation-error {
+    border-color: rgba(239, 68, 68, 0.6);
+    background-image: url("/images/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+
+  .field-validation-error {
+    position: absolute;
+    bottom: -1.55rem;
+    color: var(--color-danger);
+    font-weight: var(--font-weight-regular);
+    background-color: rgba(239, 68, 68, 0.12);
+    border-radius: 0.25rem;
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-top: 0.25rem;
+    // align-self: start;
+    max-width: fit-content;
+  }
+
+  .btn-theme {
+    @include button-theme;
+    // max-width: fit-content;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-body-s);
+
+    &:hover {
+      @include button-standard-hover;
+      @include glow;
+      cursor: pointer;
+    }
+  }
+
+  .btn-gray {
+    @include button-gray;
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-800);
+    // max-width: fit-content;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-body-s);
+
+    &:hover {
+      // @include button-standard-hover;
+      @include glow-gray;
+      cursor: pointer;
+    }
+  }
+
+  .btn-delete {
+    @include button-delete;
+    max-width: fit-content;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-body-s);
+
+    &:hover {
+      @include glow-danger;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.download {
+  padding: 3.5rem 0;
+  background-color: var(--color-gray-100);
+  .container {
+    margin: 0 auto;
+    display: flex;
+    gap: 8.3rem;
+    gap: 3rem;
+    justify-content: center;
+    flex-direction: column;
+    @include md {
+      flex-direction: row;
+    }
+    @include xl {
+      gap: 8rem;
+    }
+    .download-img-container {
+      flex: 1;
+      .download-img {
+        width: 100%;
+      }
+    }
+    .download-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 488px;
+      margin: 0 auto;
+      .download-title {
+        @include title-h2;
+        text-align: center;
+        @include md {
+          // font-size: var(--font-header-h2);
+          text-align: start;
+        }
+      }
+      .cards-group {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        @include sm {
+          flex-direction: row;
+        }
+        @include md {
+          flex-direction: column;
+          margin: 0;
+        }
+
+        .download-card {
+          display: flex;
+          gap: 2.5rem;
+          gap: 1.5rem;
+          flex-direction: column;
+          margin: 0 auto;
+
+          @include md {
+            flex-direction: row;
+            margin: 0;
+          }
+          .download-card-content {
+            .store-name {
+              font-size: var(--font-body-m);
+              font-weight: var(--font-weight-regular);
+              color: var(--color-gray-600);
+            }
+            .store-rating {
+              list-style-type: none;
+              display: flex;
+            }
+            .download-card-title {
+              font-size: var(--font-header-h4);
+              font-weight: var(--font-weight-extrabold);
+              color: var(--color-gray-900);
+              white-space: nowrap;
+              margin: 1rem 0 0.25rem;
+            }
+            .download-rating {
+              font-size: var(--font-body-m);
+              font-weight: var(--font-weight-regular);
+              color: var(--color-gray-700);
+            }
+          }
+          .card-image-container {
+            display: flex;
+            align-items: end;
+            .card-image {
+            }
+          }
+        }
+      }
+    }
+  }
+}

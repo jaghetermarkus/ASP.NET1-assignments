@@ -1,0 +1,85 @@
+.management {
+  margin: 0 auto;
+  padding: 5.1rem 0 5.9rem;
+  background-size: cover;
+  .container {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    @include lg {
+      display: flex;
+      // gap: 8rem;
+    }
+    @include xl {
+      gap: 8rem;
+    }
+    .management-img-container {
+      // flex: 6.5;
+      .management-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .management-content {
+      // flex: 3.5;
+      margin: 0 auto;
+      .management-title {
+        font-size: var(--font-header-h2);
+        font-weight: var(--font-weight-extrabold);
+        color: var(--color-gray-900);
+      }
+      .management-list {
+        list-style-type: none;
+        margin: 2rem 0 2.5rem;
+        .manage-list-object {
+          display: flex;
+          background-image: url("/images/bx-check-circle.svg");
+
+          background-repeat: no-repeat;
+          padding-left: 30px;
+          align-items: center;
+          font-size: var(--font-body-m);
+          font-weight: var(--font-weight-regular);
+          color: var(--color-gray-700);
+          margin-bottom: 0.75rem;
+        }
+      }
+
+      @mixin button {
+        border: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: 0.4rem;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+        background-color: var(--color-theme);
+        color: var(--color-white);
+        font-family: var(--font-manrope);
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            var(--color-theme) 15%,
+            var(--color-accent) 85%
+          );
+          box-shadow: 2px 2px 10px var(--color-gray-600);
+          cursor: pointer;
+        }
+      }
+
+      .management-btn {
+        @include button;
+        width: 100%;
+        @include lg {
+          width: fit-content;
+        }
+        i {
+          margin-left: 0.8rem;
+        }
+        white-space: nowrap;
+      }
+    }
+  }
+}

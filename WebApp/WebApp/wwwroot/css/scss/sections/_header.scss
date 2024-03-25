@@ -1,0 +1,273 @@
+header {
+  padding: 1rem 0;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  // height: auto;
+  // max-height: 600px;
+
+  // position: fixed;
+  // top: 0;
+  // transition: background-color 1s, height 1s, transform 1.3s ease-in-out;
+  // transition: max-height 1s ease-in-out;
+  // transform-origin: top;
+  // transform: scaleY(1);
+  // transition: max-height 1.5s ease-in-out;
+
+  .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "logo picture mobile";
+
+    @include md {
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas: "logo switch picture mobile";
+    }
+    // @include lg {
+    //   grid-template-columns: 1fr auto;
+    //   grid-template-areas: "logo switch mobile";
+    // }
+    @include xl {
+      grid-template-columns: auto 1fr auto auto;
+      grid-template-areas: "logo nav switch accounts picture";
+    }
+
+    .logo {
+      grid-area: logo;
+      display: flex;
+      margin-right: 3rem;
+    }
+    nav {
+      // &:not(.active) {
+      //   position: fixed;
+      //   top: -100%;
+      // }
+      // position: fixed;
+      // top: -100%;
+
+      grid-area: nav;
+      display: none;
+
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      // background-color: var(--color-gray-900);
+
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      // gap: 1.5rem;
+
+      // transition: top 1s, transform 1.3s ease-in-out;
+
+      @include xl {
+        position: initial;
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1.5rem;
+        background-color: transparent;
+      }
+
+      // &.active {
+      //   z-index: 40;
+      //   // background-color: var(--color-gray-900);
+      //   // position: fixed;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   margin: 0;
+      //   transform: translateX(0);
+      //   transition: top 1s, transform 1.3s ease-in-out;
+      //   .menu-link {
+      //     // display: block;
+      //     color: var(--color-white);
+      //     font-size: var(--font-header-h2);
+      //   }
+      // }
+
+      a {
+        @include navigation;
+        text-decoration: none;
+
+        &.active {
+          color: var(--color-theme);
+        }
+        // font-weight: 500;
+        // letter-spacing: 1px;
+        // color: var(--color-gray-800);
+        // transition: 0.2s ease-in;
+
+        // &:active,
+        // &.active,
+        // &:hover {
+        //   color: var(--color-theme);
+        //   transform: scale(1.05);
+        //   // text-decoration: underline;
+        // }
+      }
+    }
+
+    .btn-switch {
+      grid-area: switch;
+      display: none;
+      margin-right: 2rem;
+
+      @include md {
+        display: flex;
+      }
+    }
+
+    @mixin button {
+      border: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 0.5rem;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      transition: all 0.1s ease-in-out;
+
+      i {
+        margin-right: 0.6rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .profile-image {
+      grid-area: picture;
+      .profile-picture {
+        width: 44px;
+        height: auto;
+      }
+    }
+
+    .account-buttons {
+      grid-area: accounts;
+      display: none;
+      white-space: nowrap;
+      @include xl {
+        display: flex;
+        gap: 1rem;
+      }
+      .btn-gray {
+        @include button-theme;
+        color: var(--color-gray-800);
+        background-color: var(--color-gray-200);
+        &:hover {
+          // @include button-standard-hover;
+          @include glow-gray;
+        }
+        i {
+          margin-right: 0.6rem;
+        }
+      }
+      .btn-theme {
+        @include button-theme;
+        // color: white;
+        // background-color: var(--color-theme);
+        &:hover {
+          @include button-standard-hover;
+          @include glow;
+        }
+        i {
+          margin-right: 0.6rem;
+        }
+      }
+    }
+
+    .burger-menu {
+      z-index: 50;
+      grid-area: mobile;
+      @include button;
+      font-size: 1.75rem;
+      color: var(--color-gray-900);
+      background-color: transparent;
+      outline: none;
+
+      @include xl {
+        display: none;
+      }
+      &.active {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &.active {
+    background-color: var(--color-gray-900);
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+
+    // height: fit-content;
+    // max-height: 2000px;
+    // transition: max-height 1.5s ease-in-out;
+    // max-height: auto;
+    // transform: translateY(0);
+    // transform: translateX(0);
+    // transition: max-height 1s ease-in-out;
+
+    // transform: scaleY(1);
+
+    .container {
+      // grid-template-rows: 1fr;
+      // grid-template-areas: "mobile nav accounts";
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      .logo {
+        display: none;
+      }
+
+      .burger-menu {
+        // grid-area: mobile;
+        display: initial;
+        align-self: flex-end;
+        order: -2;
+        // position: absolute;
+        // top: 16px;
+        // right: 13px;
+      }
+
+      nav {
+        position: initial;
+        align-self: center;
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin: 5rem 0;
+        .menu-link {
+          display: block;
+          color: var(--color-white);
+          font-size: var(--font-header-h2);
+        }
+      }
+
+      .account-buttons {
+        align-self: center;
+        grid-area: accounts;
+        display: flex;
+        gap: 2rem;
+        margin: 4rem 0;
+      }
+      .profile-image {
+        display: none;
+      }
+    }
+  }
+}

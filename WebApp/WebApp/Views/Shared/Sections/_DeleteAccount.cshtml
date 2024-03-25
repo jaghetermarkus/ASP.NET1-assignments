@@ -1,0 +1,26 @@
+@model DeleteAccountViewModel
+@{
+    ViewData["Title"] = "DeleteAccount";
+}
+
+<section class="security-delete-account settings-wrapper">
+    <div class="container-form">
+        <form method="post" asp-controller="Security" asp-action="DeleteAccount">
+
+            <h5 class="form-sub-title">Delete account</h5>
+
+            <p>When you delete your account, your public profile will be deactivated immediately. If you change your mind before the 14 days are up, sign in with your email and password, and we’ll send you a link to reactivate your account.</p>
+
+            <div class="checkbox-group">
+                <div class="input-group">
+                    <input asp-for="DeleteAccount" />
+                    <label asp-for="DeleteAccount"></label>
+                </div>
+                <span asp-validation-for="DeleteAccount"></span>
+            </div>
+
+            <button class="btn-delete delete-btn">Delete</button>
+
+        </form>
+    </div>
+</section>

@@ -1,0 +1,156 @@
+.newsletter {
+  background-color: var(--color-gray-100);
+  padding: 5.9rem 0 7.3rem;
+  .container-small {
+    // width: 60%;
+    // max-width: 856px;
+    // margin: 0 auto;
+    .newsletter-title-container {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      .newsletter-title {
+        @include title-h2;
+      }
+      img {
+        margin-top: 3rem;
+      }
+    }
+
+    .newsletter-checkbox-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin: 1.7rem 0 3rem;
+      @include md {
+        flex-direction: row;
+      }
+      .checkbox-title {
+        // max-width: 200px;
+      }
+      .checkbox-div {
+        width: 100%;
+        row-gap: 0.7rem;
+        column-gap: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        input[type="checkbox"] {
+          position: relative;
+          appearance: none;
+          width: 1.25rem;
+          height: 1.25rem;
+          background-color: var(--color-gray-100);
+          border: 2px solid var(--color-gray-400);
+          color: var(--color-theme);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            cursor: pointer;
+            background-color: var(--color-gray-400);
+          }
+          &:checked {
+            background-color: var(--color-theme);
+            border-color: var(--color-theme);
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            width: 7px;
+            height: 13px;
+            border: 3px solid transparent;
+            border-left: none;
+            border-top: none;
+            transform: rotate(45deg) scale(1);
+          }
+          &:checked::before {
+            border-color: var(--color-white);
+          }
+        }
+        label {
+          display: flex;
+          align-items: center;
+          color: var(--color-gray-700);
+          font-size: var(--font-body-s);
+          font-weight: var(--font-weight-regular);
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @mixin button {
+      border: none;
+      font-weight: var(--font-weight-semibold);
+      font-family: var(--font-manrope);
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      padding: 0 1.5rem;
+      text-decoration: none;
+      color: var(--color-white);
+      background-color: var(--color-theme);
+      transition: all 0.1s ease-in-out;
+      white-space: nowrap;
+
+      &:hover {
+        cursor: pointer;
+        background: linear-gradient(
+          90deg,
+          var(--color-theme) 15%,
+          var(--color-accent) 85%
+        );
+      }
+    }
+
+    .newsletter-input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @include sm {
+        flex-direction: row;
+      }
+      .newsletter-input {
+        padding: 0.8rem 2rem 0.8rem 2.35rem;
+        width: 100%;
+        font-family: var(--font-manrope);
+        border-radius: 0.5rem;
+        border: 1px solid var(--color-gray-400);
+        background-image: url("/images/bx-envelope.svg");
+        background-repeat: no-repeat;
+        background-position: 0.7rem center;
+        color: var(--color-gray-700);
+
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+      .newsletter-btn {
+        @include button-theme;
+        white-space: nowrap;
+        &:hover {
+          @include button-standard-hover;
+          @include glow;
+        }
+      }
+    }
+
+    .newsletter-privacy {
+      font-size: var(--font-body-s);
+      font-weight: var(--font-weight-regular);
+      color: var(--color-gray-600);
+      margin-top: 0.7rem;
+
+      a {
+        color: var(--color-theme);
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}

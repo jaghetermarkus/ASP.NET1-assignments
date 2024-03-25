@@ -1,0 +1,81 @@
+@model ContactUsViewModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="contact-us-page">
+    <div class="container">
+        <div class="contact-us-header">
+            <div class="path">
+                <i class="fa-regular fa-house"></i>
+                <p>Home</p>
+                <i class="fa-sharp fa-solid fa-angles-right"></i>
+                <p class="active-path">Contact</p>
+            </div>
+        </div>
+
+        <div class="contact-us-main">
+            <div class="contact-us-content">
+            
+                <h1 class="contact-us-title">Contact Us</h1>
+                
+                <div class="contact-us-card">
+                    <div class="card-image">
+                        <img src="/images/bx-envelope-blue.svg" alt="envelope icon">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Email us</h4>
+                        <p class="card-description">Please feel free to drop us a line. We will respond as soon as possible.</p>
+                        <a class="card-link" href="">
+                            <span>Leave a message</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            
+                <div class="contact-us-card">
+                    <div class="card-image">
+                        <img src="/images/add-group-simple.svg" alt="add group icon">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Careers</h4>
+                        <p class="card-description">Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
+                        <a class="card-link" href="">
+                            <span>Send an application</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form method="post" asp-controller="Default" asp-action="Contact" >
+                    <h3 class="contact-form-title">Get In Contact With Us</h3>
+                    <div class="input-group">
+                        <label asp-for="FullName"></label>
+                        <input asp-for="FullName">
+                        <span asp-validation-for="FullName"></span>
+                    </div>
+                    <div class="input-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="input-group">
+                        <label asp-for="Service"></label>
+                        <select asp-for="Service"></select>
+                        <span asp-validation-for="Service"></span>
+                    </div>
+                    <div class="input-group">
+                        <label asp-for="Message"></label>
+                        <textarea asp-for="Message"></textarea>
+                        <span asp-validation-for="Message"></span>
+                    </div>
+                    <button class="btn-theme contact-us-btn">Send Contact Request</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-xl">
+        <img src="/images/map.svg" alt="map image" class="map-image">
+    </div>
+</section>

@@ -1,0 +1,64 @@
+.work-tools {
+  background-color: var(--color-white);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //   width: 80%;
+    margin: 0 auto;
+    padding-top: 5.9rem;
+    padding-bottom: 6.1rem;
+    .work-tools-title {
+      @include title-h2;
+    }
+    p {
+      margin: 1.5rem 0 3.5rem;
+      color: var(--color-gray-600);
+      font-size: var(--font-body-l);
+      font-weight: var(--font-weight-regular);
+      max-width: 850px;
+      text-align: center;
+    }
+    .work-tools-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+      @include sm {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include lg {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .work-tools-card {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem;
+        @include md {
+          padding: 1.5rem;
+        }
+        @include lg {
+          padding: 2rem;
+        }
+
+        &:hover {
+          background-color: var(--color-white);
+          cursor: pointer;
+          border-radius: 0.5rem;
+          box-shadow: 0 0 10px var(--color-gray-200);
+        }
+        .icon {
+          img {
+          }
+        }
+        .work-tools-description {
+          font-size: var(--font-body-m);
+          font-weight: var(--font-weight-regular);
+          color: var(--color-gray-700);
+          text-align: start;
+          margin: 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}

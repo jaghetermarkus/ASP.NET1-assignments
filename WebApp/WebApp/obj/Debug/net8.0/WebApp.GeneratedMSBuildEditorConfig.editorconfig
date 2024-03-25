@@ -1,0 +1,171 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/Address.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9BZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/BasicInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9CYXNpY0luZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/DeleteAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9EZWxldGVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9QYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/Security.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TZWN1cml0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Auth/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Auth/SignOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TaWduT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Auth/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Course/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0NvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Course/SingleCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL1NpbmdsZUNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Default/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVmYXVsdC9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Default/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVmYXVsdC9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Default/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVmYXVsdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Partials/_CourseCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydGlhbHMvX0NvdXJzZUNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Address.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19BZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_BasicInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19CYXNpY0luZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19Db3Vyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_DeleteAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19EZWxldGVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Download.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19Eb3dubG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19FcnJvcjQwNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Features.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19GZWF0dXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Hero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19IZXJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Management.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19NYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Newsletter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19OZXdzbGV0dGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19QYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_ProfileMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19Qcm9maWxlTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19TaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_TestSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19UZXN0U2VjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Theme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19UaGVtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_WorkTools.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1NlY3Rpb25zL19Xb3JrVG9vbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

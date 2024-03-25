@@ -1,0 +1,100 @@
+.contact-us-page {
+  background-color: var(--color-gray-100);
+  padding-top: 2.5rem;
+  margin: 0 auto 2.5rem;
+  .container {
+    .contact-us-main {
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+      @include lg {
+        flex-direction: row;
+      }
+      .contact-us-content {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .contact-us-title {
+          @include title-h2;
+          margin-bottom: 4.5rem;
+        }
+        .contact-us-card {
+          display: flex;
+          gap: 1.5rem;
+          max-width: 390px;
+          justify-content: start;
+          .card-image {
+            background-color: var(--color-white);
+            border-radius: 50%;
+            padding: 1rem;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .card-content {
+            margin-bottom: 2.8rem;
+            .card-title {
+              color: var(--color-gray-900);
+              font-weight: var(--font-weight-extrabold);
+              font-size: var(--font-body-lead);
+            }
+            .card-description {
+              font-size: var(--font-body-m);
+              font-weight: var(--font-weight-regular);
+              color: var(--color-gray-700);
+              line-height: 160%;
+              margin: 0.75rem 0 1.5rem;
+            }
+            .card-link {
+              font-size: var(--font-body-m);
+              font-weight: var(--font-weight-semibold);
+              color: var(--color-theme);
+              line-height: 160%;
+              background-color: transparent;
+              text-decoration: none;
+              i {
+                margin-left: 0.8rem;
+              }
+              &:hover {
+                text-decoration: underline;
+              }
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      .contact-form-container {
+        z-index: 10;
+        flex: 2;
+        max-width: 636px;
+        background-color: var(--color-white);
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06),
+          0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+        padding: 2.5rem 2.5rem 2.3rem;
+        @include lg {
+          padding: 4.5rem 4.5rem 3.3rem;
+        }
+        textarea {
+          height: 12.5rem;
+        }
+        .contact-us-btn {
+          width: fit-content;
+          font-size: var(--font-body-m);
+          width: 100%;
+          @include glow;
+          @include lg {
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+  .container-xl {
+    margin-top: -15rem;
+  }
+}

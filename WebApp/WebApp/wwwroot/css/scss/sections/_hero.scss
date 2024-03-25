@@ -1,0 +1,95 @@
+.hero {
+  padding: 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  @include lg {
+    flex-direction: row;
+  }
+  .content-container {
+    flex: 1;
+    display: flex;
+    @include lg {
+      justify-content: end;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 525px;
+      // margin-top: 7rem;
+      padding-left: auto;
+      h1 {
+        @include title-h1;
+      }
+      .hero-description {
+        font-size: 1.1rem;
+        color: var(--color-gray-700);
+        margin: 2rem 0 3rem;
+        line-height: 160%;
+      }
+
+      @mixin button {
+        border: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 7rem;
+        text-decoration: none;
+        color: var(--color-white);
+        background-color: var(--color-theme);
+        box-shadow: 0 3px 10px var(--color-theme);
+        transition: all 0.1s ease-in-out;
+        font-family: var(--font-manrope);
+
+        &:hover {
+          cursor: pointer;
+          background: linear-gradient(
+            90deg,
+            var(--color-theme) 15%,
+            var(--color-accent) 85%
+          );
+        }
+      }
+
+      .hero-btn {
+        @include button-theme;
+        @include glow;
+        margin-bottom: 3rem;
+        width: 100%;
+        @include md {
+          margin-bottom: 5rem;
+          width: fit-content;
+        }
+        @include xl {
+          margin-bottom: 7rem;
+        }
+        &:hover {
+          @include button-standard-hover;
+        }
+      }
+      h6 {
+        font-size: var(--font-header-h6);
+        font-weight: var(--font-weight-extrabold);
+        color: var(--color-gray-900);
+        margin-bottom: 2.5rem;
+      }
+      ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(113px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+  }
+  .hero-img {
+    @include lg {
+      order: 2;
+    }
+    flex: 1;
+    .heroimage {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

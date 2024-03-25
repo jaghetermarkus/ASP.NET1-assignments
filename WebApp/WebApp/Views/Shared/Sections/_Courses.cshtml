@@ -1,0 +1,51 @@
+<section class="courses-page">
+    <div class="container">
+        <div class="courses-header">
+            <div class="path">
+                <i class="fa-regular fa-house"></i>
+                <p>Home</p>
+                <i class="fa-sharp fa-solid fa-angles-right"></i>
+                <p class="active-path">Courses</p>
+            </div>
+        
+            <div class="content-container">
+                <h1 class="courses-title">Courses</h1>
+                <div class="filters">
+                    <select name="category" id="category"></select>
+                    <input type="search" placeholder="Search courses">
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-wrapper">
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+            <partial name="~/Views/Partials/_CourseCard.cshtml" /> 
+        </div>
+        <div class="page-seletor">
+            <i class="fa-solid fa-angle-left"></i>
+            <p>1</p>
+            <p>2</p>
+            <p class="active-page">3</p>
+            <p>4</p>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="skills-box">
+            <div class="skills-content">
+                <p>Ready to get started?</p>
+                <h2 class="skills-title">Take Your <span>Skills</span> to the Next Level</h2>
+                <button class="btn-theme">Work with us</button>
+            </div>
+            <div class="skills-image-box">
+                <img src="/images/courses-illustration.svg" alt="skills illustration image">
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,129 @@
+.courses-page {
+  margin: 2.5rem 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    .courses-header {
+      .path {
+        display: flex;
+        align-items: center;
+        color: var(--color-gray-400);
+        font-size: var(--font-body-s);
+        font-weight: var(--font-weight-regular);
+        margin-bottom: 2rem;
+        .fa-house {
+          margin-right: 0.25rem;
+        }
+        .fa-angles-right {
+          margin: 0 0.75rem;
+        }
+        .active-path {
+          color: var(--color-theme);
+        }
+      }
+      .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .courses-title {
+          @include title-h2;
+        }
+        .filters {
+          display: flex;
+          gap: 1.5rem;
+          width: 570px;
+          input,
+          select {
+            @include input;
+            max-height: 44px;
+          }
+          input {
+            background-image: url("/images/search-icon.svg");
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position: right 1rem center;
+          }
+        }
+      }
+    }
+
+    .courses-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      row-gap: 2.5rem;
+      column-gap: 1.5rem;
+    }
+
+    .page-seletor {
+      font-size: var(--font-body-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-800);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 auto;
+      p,
+      i {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-gray-800);
+        &:hover {
+          background-color: var(--color-gray-200);
+          color: var(--color-gray-800);
+          cursor: pointer;
+        }
+      }
+      .active-page {
+        background-color: var(--color-theme);
+        color: var(--color-white);
+      }
+    }
+
+    .skills-box {
+      display: flex;
+      background-color: var(--color-gray-100);
+      border-radius: 0.5rem;
+      margin: 3.5rem auto 6rem;
+      padding: 2rem 6.9rem;
+      .skills-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        p {
+          font-size: var(--font-body-lead);
+          font-weight: var(--font-weight-regular);
+          color: var(--color-gray-700);
+        }
+        .skills-title {
+          margin: 1rem 0 2.5rem;
+          @include title-h2;
+          span {
+            color: var(--color-theme);
+          }
+        }
+        .btn-theme {
+          @include button-theme;
+          @include glow;
+          &:hover {
+            @include button-standard-hover;
+          }
+        }
+      }
+
+      .skills-image-box {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
