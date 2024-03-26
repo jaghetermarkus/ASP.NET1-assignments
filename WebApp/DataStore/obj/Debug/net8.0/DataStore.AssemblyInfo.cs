@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bdf3ba6c6f76c06dd2d01070bf47c62c05d9cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

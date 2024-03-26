@@ -1912,6 +1912,17 @@ footer .container-small .copyright {
   font-weight: var(--font-weight-bold);
   color: var(--color-theme);
 }
+.course-content .discount-price {
+  font-size: var(--font-body-l);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-danger);
+}
+.course-content .discount-price span {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-gray-600);
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
 .course-content hr {
   border-color: var(--color-gray-300);
   margin: 1rem 0;

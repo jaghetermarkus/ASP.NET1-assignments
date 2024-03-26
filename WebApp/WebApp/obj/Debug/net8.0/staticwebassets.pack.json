@@ -189,8 +189,44 @@
       "PackagePath": "staticwebassets/images/chat.svg"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-css-drawing.png",
+      "PackagePath": "staticwebassets/images/course-css-drawing.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-frontend.png",
+      "PackagePath": "staticwebassets/images/course-frontend.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-fullstack.png",
+      "PackagePath": "staticwebassets/images/course-fullstack.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-game-design.png",
+      "PackagePath": "staticwebassets/images/course-game-design.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-iOS-Swift.png",
+      "PackagePath": "staticwebassets/images/course-iOS-Swift.png"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-image.png",
       "PackagePath": "staticwebassets/images/course-image.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-python.png",
+      "PackagePath": "staticwebassets/images/course-python.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-testing.png",
+      "PackagePath": "staticwebassets/images/course-testing.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-unity.png",
+      "PackagePath": "staticwebassets/images/course-unity.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-webdevelop.png",
+      "PackagePath": "staticwebassets/images/course-webdevelop.png"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/courses-illustration.svg",

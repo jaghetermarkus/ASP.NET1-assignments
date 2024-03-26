@@ -13,3 +13,4 @@
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/DataStore/obj/Debug/net8.0/refint/DataStore.dll
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/DataStore/obj/Debug/net8.0/DataStore.pdb
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/DataStore/obj/Debug/net8.0/ref/DataStore.dll
+/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/DataStore/obj/Debug/net8.0/DataStore.sourcelink.json

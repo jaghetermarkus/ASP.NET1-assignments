@@ -1,14 +1,20 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Services;
 
 namespace WebApp.Controllers;
 
 [Authorize]
-public class CourseController : Controller
+public class CourseController(CourseService courseService) : Controller
 {
+    private readonly CourseService _courseService = courseService;
+
     [Route("/courses")]
-    public IActionResult Courses()
+    public async Task<IActionResult> Courses()
     {
+        var courses = await _courseService.GetAllCoursesAsync();
+
+        ViewBag.Courses = courses;
         return View();
     }
 

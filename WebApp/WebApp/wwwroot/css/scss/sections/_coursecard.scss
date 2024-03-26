@@ -69,6 +69,17 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-theme);
   }
+  .discount-price {
+    font-size: var(--font-body-l);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-danger);
+    span {
+      font-weight: var(--font-weight-regular);
+      color: var(--color-gray-600);
+      text-decoration: line-through;
+      margin-left: 0.5rem;
+    }
+  }
   hr {
     border-color: var(--color-gray-300);
     margin: 1rem 0;

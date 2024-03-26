@@ -138,3 +138,4 @@
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/obj/Debug/net8.0/ref/WebApp.dll
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/courses.json
+/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/obj/Debug/net8.0/WebApp.sourcelink.json

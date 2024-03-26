@@ -10,7 +10,7 @@
     "Hours": 220,
     "LikesInProcent": 94,
     "LikesInNumbers": 4200,
-    "CourseImageUrl": ""
+    "CourseImageUrl": "images/course-fullstack.png"
   },
   {
     "CourseNumber": 2,
@@ -23,7 +23,7 @@
     "Hours": 160,
     "LikesInProcent": 92,
     "LikesInNumbers": 3100,
-    "CourseImageUrl": ""
+    "CourseImageUrl": "images/course-webdevelop.png"
   },
   {
     "CourseNumber": 3,
@@ -36,6 +36,84 @@
     "Hours": 100,
     "LikesInProcent": 98,
     "LikesInNumbers": 2700,
-    "CourseImageUrl": ""
+    "CourseImageUrl": "images/course-frontend.png"
+  },
+  {
+    "CourseNumber": 4,
+    "Title": "iOS & Swift - The Complete iOS App Development Course",
+    "IsBestSeller": false,
+    "IsDigital": false,
+    "Author": "Marvin McKinney",
+    "OriginalPrice": 15.99,
+    "DiscountPrice": 0,
+    "Hours": 160,
+    "LikesInProcent": 92,
+    "LikesInNumbers": 3100,
+    "CourseImageUrl": "images/course-iOS-Swift.png"
+  },
+  {
+    "CourseNumber": 5,
+    "Title": "Data Science & Machine Learning with Python",
+    "IsBestSeller": true,
+    "IsDigital": true,
+    "Author": "Esther Howard",
+    "OriginalPrice": 11.2,
+    "DiscountPrice": 0,
+    "Hours": 160,
+    "LikesInProcent": 92,
+    "LikesInNumbers": 3100,
+    "CourseImageUrl": "images/course-python.png"
+  },
+  {
+    "CourseNumber": 6,
+    "Title": "Creative CSS Drawing Course: Make Art With CSS",
+    "IsBestSeller": false,
+    "IsDigital": true,
+    "Author": "Robert Fox",
+    "OriginalPrice": 10.5,
+    "DiscountPrice": 0,
+    "Hours": 220,
+    "LikesInProcent": 94,
+    "LikesInNumbers": 4200,
+    "CourseImageUrl": "images/course-css-drawing.png"
+  },
+  {
+    "CourseNumber": 7,
+    "Title": "Blender Character Creator v2.0 for Video Games Design",
+    "IsBestSeller": false,
+    "IsDigital": false,
+    "Author": "Ralph Edwards",
+    "OriginalPrice": 18.99,
+    "DiscountPrice": 0,
+    "Hours": 170,
+    "LikesInProcent": 93,
+    "LikesInNumbers": 3200,
+    "CourseImageUrl": "images/course-game-design.png"
+  },
+  {
+    "CourseNumber": 8,
+    "Title": "The Ultimate Guide to 2D Mobile Game Development with Unity",
+    "IsBestSeller": false,
+    "IsDigital": false,
+    "Author": "Albert Flores",
+    "OriginalPrice": 44.99,
+    "DiscountPrice": 12.99,
+    "Hours": 100,
+    "LikesInProcent": 98,
+    "LikesInNumbers": 2700,
+    "CourseImageUrl": "images/course-unity.png"
+  },
+  {
+    "CourseNumber": 9,
+    "Title": "Learn JMETER from Scratch on Live Apps-Performance Testing",
+    "IsBestSeller": false,
+    "IsDigital": true,
+    "Author": "Jenny Wilson",
+    "OriginalPrice": 14.5,
+    "DiscountPrice": 0,
+    "Hours": 160,
+    "LikesInProcent": 91,
+    "LikesInNumbers": 3600,
+    "CourseImageUrl": "images/course-testing.png"
   }
 ]
