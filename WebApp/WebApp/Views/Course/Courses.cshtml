@@ -1,3 +1,5 @@
+@model X.PagedList.IPagedList<Infrastructure.Entities.CourseEntity>
+@using X.PagedList.Mvc.Core
 @{
     ViewData["Title"] = "Courses";
 }
@@ -15,19 +17,20 @@
         
             <div class="content-container">
                 <h1 class="courses-title">Courses</h1>
-                <div class="filters">
+                <form asp-action="Courses" asp-controller="Course" method="get" class="filters">
                     <select name="category" id="category"></select>
-                    <input type="search" placeholder="Search courses">
-                </div>
+                    <input type="search" placeholder="Search courses" name="searchString">
+                    <button type="submit">Search</button>
+                </form>
             </div>
         </div>
 
         <div class="courses-wrapper">
-            @foreach (var course in ViewBag.Courses)
+            @foreach (var course in Model)
             {
-                ViewData["Course"] = course;
+                @* ViewData["Course"] = course; *@
                 
-                @await Html.PartialAsync("~/Views/Partials/_CourseCard.cshtml") 
+                @await Html.PartialAsync("~/Views/Partials/_CourseCard.cshtml", course) 
             }
         </div>
         <div class="page-seletor">
@@ -38,6 +41,11 @@
             <p>4</p>
             <i class="fa-solid fa-angle-right"></i>
         </div>
+        
+
+@Html.PagedListPager(Model, page => Url.Action("Courses", "Course", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
+
+
         <div class="skills-box">
             <div class="skills-content">
                 <p>Ready to get started?</p>

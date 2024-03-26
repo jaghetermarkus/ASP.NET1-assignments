@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6qoPJHT14elZOZlmro6Ik5t7X4eXaYXEyc1g+Ob7qa1szfgg0jNmPrIa2PrVSo0vzgY7kCkHvhWs/azf+XXt4g==",
+  "dgSpecHash": "2MqwzgBZMe/3+I0xZZxLsXhKuZHfYd1HYbeMCaJ54KcVQQ5qsUFSXvSiwvErb/CgjaxxIfgcgepXr6u9HCAwfg==",
   "success": true,
   "projectFilePath": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/WebApp.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,8 @@
     "/Users/markuskarlsson/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/pagedlist/1.17.0/pagedlist.1.17.0.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/pagedlist.mvc/4.5.0/pagedlist.mvc.4.5.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.6/sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/sqlitepclraw.core/2.1.6/sqlitepclraw.core.2.1.6.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.6/sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
@@ -59,7 +61,30 @@
     "/Users/markuskarlsson/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
-    "/Users/markuskarlsson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
+    "/Users/markuskarlsson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist/9.1.2/x.pagedlist.9.1.2.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist.mvc.core/9.1.2/x.pagedlist.mvc.core.9.1.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
