@@ -5,12 +5,13 @@
     "IsBestSeller": true,
     "IsDigital": true,
     "Author": "Robert Fox",
-    "OriginalPrice": 12.5,
-    "DiscountPrice": 0,
+    "OriginalPrice": "12.50",
+    "DiscountPrice": "0",
     "Hours": 220,
     "LikesInProcent": 94,
-    "LikesInNumbers": 4200,
-    "CourseImageUrl": "images/course-fullstack.png"
+    "LikesInNumbers": "4.2",
+    "CourseImageUrl": "course-fullstack.png",
+    "CategoryId": 1
   },
   {
     "CourseNumber": 2,
@@ -18,12 +19,13 @@
     "IsBestSeller": false,
     "IsDigital": true,
     "Author": "Jenny Wilson",
-    "OriginalPrice": 15.99,
-    "DiscountPrice": 0,
+    "OriginalPrice": "15.99",
+    "DiscountPrice": "0",
     "Hours": 160,
     "LikesInProcent": 92,
-    "LikesInNumbers": 3100,
-    "CourseImageUrl": "images/course-webdevelop.png"
+    "LikesInNumbers": "3.1",
+    "CourseImageUrl": "course-webdevelop.png",
+    "CategoryId": 1
   },
   {
     "CourseNumber": 3,
@@ -31,12 +33,13 @@
     "IsBestSeller": false,
     "IsDigital": true,
     "Author": "Albert Flores",
-    "OriginalPrice": 44.99,
-    "DiscountPrice": 9.99,
+    "OriginalPrice": "44.99",
+    "DiscountPrice": "9.99",
     "Hours": 100,
     "LikesInProcent": 98,
-    "LikesInNumbers": 2700,
-    "CourseImageUrl": "images/course-frontend.png"
+    "LikesInNumbers": "2.7",
+    "CourseImageUrl": "course-frontend.png",
+    "CategoryId": 2
   },
   {
     "CourseNumber": 4,
@@ -44,12 +47,13 @@
     "IsBestSeller": false,
     "IsDigital": false,
     "Author": "Marvin McKinney",
-    "OriginalPrice": 15.99,
-    "DiscountPrice": 0,
+    "OriginalPrice": "15.99",
+    "DiscountPrice": "0",
     "Hours": 160,
     "LikesInProcent": 92,
-    "LikesInNumbers": 3100,
-    "CourseImageUrl": "images/course-iOS-Swift.png"
+    "LikesInNumbers": "3.1",
+    "CourseImageUrl": "course-iOS-Swift.png",
+    "CategoryId": 5
   },
   {
     "CourseNumber": 5,
@@ -57,12 +61,13 @@
     "IsBestSeller": true,
     "IsDigital": true,
     "Author": "Esther Howard",
-    "OriginalPrice": 11.2,
-    "DiscountPrice": 0,
+    "OriginalPrice": "11.20",
+    "DiscountPrice": "0",
     "Hours": 160,
     "LikesInProcent": 92,
-    "LikesInNumbers": 3100,
-    "CourseImageUrl": "images/course-python.png"
+    "LikesInNumbers": "3.1",
+    "CourseImageUrl": "course-python.png",
+    "CategoryId": 3
   },
   {
     "CourseNumber": 6,
@@ -70,12 +75,13 @@
     "IsBestSeller": false,
     "IsDigital": true,
     "Author": "Robert Fox",
-    "OriginalPrice": 10.5,
-    "DiscountPrice": 0,
+    "OriginalPrice": "10.50",
+    "DiscountPrice": "0",
     "Hours": 220,
     "LikesInProcent": 94,
-    "LikesInNumbers": 4200,
-    "CourseImageUrl": "images/course-css-drawing.png"
+    "LikesInNumbers": "4.2",
+    "CourseImageUrl": "course-css-drawing.png",
+    "CategoryId": 2
   },
   {
     "CourseNumber": 7,
@@ -83,12 +89,13 @@
     "IsBestSeller": false,
     "IsDigital": false,
     "Author": "Ralph Edwards",
-    "OriginalPrice": 18.99,
-    "DiscountPrice": 0,
+    "OriginalPrice": "18.99",
+    "DiscountPrice": "0",
     "Hours": 170,
     "LikesInProcent": 93,
-    "LikesInNumbers": 3200,
-    "CourseImageUrl": "images/course-game-design.png"
+    "LikesInNumbers": "3.2",
+    "CourseImageUrl": "course-game-design.png",
+    "CategoryId": 4
   },
   {
     "CourseNumber": 8,
@@ -96,12 +103,13 @@
     "IsBestSeller": false,
     "IsDigital": false,
     "Author": "Albert Flores",
-    "OriginalPrice": 44.99,
-    "DiscountPrice": 12.99,
+    "OriginalPrice": "44.99",
+    "DiscountPrice": "12.99",
     "Hours": 100,
     "LikesInProcent": 98,
-    "LikesInNumbers": 2700,
-    "CourseImageUrl": "images/course-unity.png"
+    "LikesInNumbers": "2.7",
+    "CourseImageUrl": "course-unity.png",
+    "CategoryId": 4
   },
   {
     "CourseNumber": 9,
@@ -109,11 +117,12 @@
     "IsBestSeller": false,
     "IsDigital": true,
     "Author": "Jenny Wilson",
-    "OriginalPrice": 14.5,
-    "DiscountPrice": 0,
+    "OriginalPrice": "14.50",
+    "DiscountPrice": "0",
     "Hours": 160,
     "LikesInProcent": 91,
-    "LikesInNumbers": 3600,
-    "CourseImageUrl": "images/course-testing.png"
+    "LikesInNumbers": "3.6",
+    "CourseImageUrl": "course-testing.png",
+    "CategoryId": 5
   }
 ]

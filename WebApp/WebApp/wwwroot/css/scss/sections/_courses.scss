@@ -32,7 +32,8 @@
         .filters {
           display: flex;
           gap: 1.5rem;
-          width: 570px;
+          // width: 570px;
+          // max-width: 35rem;
           input,
           select {
             @include input;
@@ -43,6 +44,7 @@
             background-repeat: no-repeat;
             background-size: 16px;
             background-position: right 1rem center;
+            max-width: 19rem;
           }
         }
       }

@@ -7,4 +7,5 @@ namespace DataStore.Contexts;
 public class DataContext(DbContextOptions<DataContext> options) : IdentityDbContext<UserEntity>(options)
 {
     public DbSet<CourseEntity> Courses { get; set; }
+    public DbSet<CategoryEntity> Categories { get; set; }
 }

@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<CourseService>();
+builder.Services.AddScoped<AccountService>();
 
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlite(builder.Configuration.GetConnectionString("Sqlite")));
 builder.Services.AddDefaultIdentity<UserEntity>(x =>

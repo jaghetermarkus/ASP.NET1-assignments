@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9QYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/ProfileImageUpload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Qcm9maWxlSW1hZ2VVcGxvYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Account/Security.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TZWN1cml0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Partials/_CourseCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydGlhbHMvX0NvdXJzZUNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Partials/_Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydGlhbHMvX0Ryb3Bkb3duLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/Views/Shared/Sections/_Address.cshtml]

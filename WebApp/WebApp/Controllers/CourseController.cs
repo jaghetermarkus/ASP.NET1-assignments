@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 using WebApp.Services;
+using Infrastructure.Models;
 
 namespace WebApp.Controllers;
 
@@ -24,7 +25,7 @@ public class CourseController(CourseService courseService, DataContext context) 
 
     [Route("/courses/{page?}")]
 
-    public IActionResult Courses(string sortOrder, string searchString, string currentFilter, int? page)
+    public async Task<IActionResult> Courses(string sortOrder, string searchString, string currentFilter, string category, int? page)
     {
         ViewBag.CurrentSort = sortOrder;
         // ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -35,13 +36,19 @@ public class CourseController(CourseService courseService, DataContext context) 
             searchString = currentFilter;
 
         ViewBag.CurrentFilter = searchString;
+        ViewBag.CurrentCategory = category;
 
-        var courses = from c in _context.Courses select c;
+        var coursesQuery = from c in _context.Courses select c;
 
         if (!String.IsNullOrEmpty(searchString))
         {
             searchString = searchString.ToLower();
-            courses = courses.Where(c => c.Title.ToLower().Contains(searchString) || c.Author.ToLower().Contains(searchString));
+            coursesQuery = coursesQuery.Where(c => c.Title.ToLower().Contains(searchString) || c.Author.ToLower().Contains(searchString));
+        }
+
+        if (!String.IsNullOrEmpty(category) && category.ToLower() != "all")
+        {
+            coursesQuery = coursesQuery.Where(c => c.Category.CategoryName.ToLower() == category.ToLower());
         }
 
         // switch (sortOrder)
@@ -56,9 +63,20 @@ public class CourseController(CourseService courseService, DataContext context) 
 
         // var coursesList = await courses.ToListAsync();
 
-        int pageSize = 6;
+        int pageSize = 3;
         int pageNumber = (page ?? 1);
-        return View(courses.ToPagedList(pageNumber, pageSize));
+
+        var courses = coursesQuery.ToPagedList(pageNumber, pageSize);
+        var categories = await _context.Categories.ToListAsync();
+
+        var viewModel = new CoursesViewModel
+        {
+            Courses = courses,
+            Categories = categories
+        };
+
+
+        return View(viewModel);
     }
 
 

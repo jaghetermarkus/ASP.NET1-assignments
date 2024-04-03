@@ -341,8 +341,28 @@
       "PackagePath": "staticwebassets/images/twisted-arrow.svg"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/default_avatar.jpg",
+      "PackagePath": "staticwebassets/images/uploads/default_avatar.jpg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_978cdff6-c7f3-41a2-80f4-ba481cfdb479.jpg",
+      "PackagePath": "staticwebassets/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_978cdff6-c7f3-41a2-80f4-ba481cfdb479.jpg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_a0463eec-d4aa-48f4-ae5a-2ceb8f9cfa08.png",
+      "PackagePath": "staticwebassets/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_a0463eec-d4aa-48f4-ae5a-2ceb8f9cfa08.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_7437899c-14ad-4be0-9783-81798938eb23_b667d090-eee2-408d-876d-7a9b3ba3dd41.jpg",
+      "PackagePath": "staticwebassets/images/uploads/pImg_7437899c-14ad-4be0-9783-81798938eb23_b667d090-eee2-408d-876d-7a9b3ba3dd41.jpg"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/zoom-icon.svg",
       "PackagePath": "staticwebassets/images/zoom-icon.svg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/courses.js",
+      "PackagePath": "staticwebassets/js/courses.js"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/site.js",

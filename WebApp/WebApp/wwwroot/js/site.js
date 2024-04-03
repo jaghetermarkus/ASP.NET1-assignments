@@ -18,6 +18,8 @@
     // nav.classList.remove("active");
     header.classList.remove("active");
   });
+
+  handleProfileImageUpload();
 });
 
 var currentUrl = window.location.href;
@@ -36,4 +38,18 @@ if (currentUrl.includes("details")) {
 
 if (document.body.querySelector(".dark-mode")) {
   document.querySelector(".input-switch").classList.add("dark");
+}
+
+function handleProfileImageUpload() {
+  try {
+    let fileUploader = document.querySelector("#fileUploader");
+    if (fileUploader != undefined) {
+      fileUploader.addEventListener("change", function () {
+        console.log(this.files);
+        if (this.files.length > 0) {
+          this.form.submit();
+        }
+      });
+    }
+  } catch (error) {}
 }

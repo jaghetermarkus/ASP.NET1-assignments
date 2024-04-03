@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gGBp7KfK/OTLv1+mfqSFX+f0v3EVijrnq2iAAhZ2ascjwUESbmIUa6HS+DVELYkahhhxHin14IQ0Zs2nOpwXuQ==",
+  "dgSpecHash": "X4gSyYe2YwAj+PDk9nbYYuCLD1iX0QMwRAJsBuaC8CdWSrh2opSNdL2R4r+73xB7k61bV9aTzr09yDoy3Lx0BA==",
   "success": true,
   "projectFilePath": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/DataStore/DataStore.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,9 @@
     "/Users/markuskarlsson/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.6/sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
-    "/Users/markuskarlsson/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512"
+    "/Users/markuskarlsson/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist/9.1.2/x.pagedlist.9.1.2.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist.mvc.core/9.1.2/x.pagedlist.mvc.core.9.1.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,5 +1,9 @@
 @inject SignInManager<UserEntity> SignInManager
 
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+
 <header>
     <div class="container">
         <a class="logo" asp-action="Index" asp-controller="Default"><img src="~/images/logo-solid.svg" alt=""></a>
@@ -29,7 +33,7 @@
         @if (SignInManager.IsSignedIn(User))
         {
             <a class="profile-image" asp-action="Details" asp-controller="Account" >
-                <img src="/images/profile-picture.png" alt="profile picture" class="profile-picture">
+                <img src="/images/uploads/@user?.ProfileImage" alt="profile picture" class="profile-picture">
             </a>
         }
         else 

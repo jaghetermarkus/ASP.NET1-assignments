@@ -1,4 +1,5 @@
-@model X.PagedList.IPagedList<Infrastructure.Entities.CourseEntity>
+@* @model X.PagedList.IPagedList<Infrastructure.Entities.CourseEntity> *@
+@model CoursesViewModel
 @using X.PagedList.Mvc.Core
 @{
     ViewData["Title"] = "Courses";
@@ -17,16 +18,32 @@
         
             <div class="content-container">
                 <h1 class="courses-title">Courses</h1>
-                <form asp-action="Courses" asp-controller="Course" method="get" class="filters">
-                    <select name="category" id="category"></select>
-                    <input type="search" placeholder="Search courses" name="searchString">
+                <form id="courseFilterForm" asp-action="Courses" asp-controller="Course" method="get" class="filters">
+
+                    <div class="select">
+                        <div class="selected">All categories</div>
+                        <div class="select-options">
+                            <div class="option" data-value="all">All categories</div> 
+                                @if (Model.Categories != null)
+                                {
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <div class="option" data-value="@category.CategoryName">@category.CategoryName</div>
+                                    }
+                                }
+                        </div>
+                    </div>
+
+                    @* <select name="category" id="category"></select> *@
+                    <input type="hidden" name="category" id="selectedCategory" value="all">
+                    <input type="search" placeholder="Search courses" name="searchString" id="searchString">
                     <button type="submit">Search</button>
                 </form>
             </div>
         </div>
 
         <div class="courses-wrapper">
-            @foreach (var course in Model)
+            @foreach (var course in Model.Courses)
             {
                 @* ViewData["Course"] = course; *@
                 
@@ -43,7 +60,7 @@
         </div>
         
 
-@Html.PagedListPager(Model, page => Url.Action("Courses", "Course", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
+@Html.PagedListPager(Model.Courses, page => Url.Action("Courses", "Course", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
 
 
         <div class="skills-box">

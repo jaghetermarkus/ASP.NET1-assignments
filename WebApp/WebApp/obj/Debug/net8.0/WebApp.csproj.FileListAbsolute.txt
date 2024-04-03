@@ -143,3 +143,4 @@
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/PagedList.Mvc.dll
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/X.PagedList.dll
 /Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/X.PagedList.Mvc.Core.dll
+/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/bin/Debug/net8.0/courseCategories.json

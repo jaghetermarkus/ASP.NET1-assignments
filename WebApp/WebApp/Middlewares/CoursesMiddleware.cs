@@ -11,6 +11,35 @@ public class CoursesMiddleware(RequestDelegate next)
 
     public async Task InvokeAsync(HttpContext context, DataContext dbContext)
     {
+
+        /// CATEGORIES
+        var categoriesJson = File.ReadAllText("courseCategories.json");
+        var categories = JsonConvert.DeserializeObject<List<CategoryEntity>>(categoriesJson);
+
+        if (categories != null)
+        {
+            foreach (var category in categories)
+            {
+                var existingCategory = dbContext.Categories.FirstOrDefault(x => x.Id == category.Id);
+
+                if (existingCategory == null)
+                {
+                    dbContext.Categories.Add(category);
+                }
+                // else
+                // {
+                //     existingCategory.Id = category.Id;
+                //     existingCategory.CategoryName = category.CategoryName;
+
+                //     dbContext.Entry(existingCategory).State = EntityState.Modified;
+                // }
+            }
+            // await dbContext.SaveChangesAsync();
+        }
+
+
+
+        /// COURSES
         var coursesJson = File.ReadAllText("courses.json");
         var courses = JsonConvert.DeserializeObject<List<CourseEntity>>(coursesJson);
 
@@ -26,8 +55,6 @@ public class CoursesMiddleware(RequestDelegate next)
                 }
                 else
                 {
-                    // dbContext.Entry(existingCourse).CurrentValues.SetValues(course);
-                    // Uppdatera de icke-nyckel-egenskaperna för den befintliga kursen med egenskaperna från den nya kursen
                     existingCourse.Title = course.Title;
                     existingCourse.IsBestSeller = course.IsBestSeller;
                     existingCourse.IsDigital = course.IsDigital;
@@ -38,13 +65,13 @@ public class CoursesMiddleware(RequestDelegate next)
                     existingCourse.LikesInProcent = course.LikesInProcent;
                     existingCourse.LikesInNumbers = course.LikesInNumbers;
                     existingCourse.CourseImageUrl = course.CourseImageUrl;
+                    existingCourse.CategoryId = course.CategoryId;
 
-                    // Markera entiteten som ändrad för att den ska sparas i databasen
                     dbContext.Entry(existingCourse).State = EntityState.Modified;
                 }
-                await dbContext.SaveChangesAsync();
             }
-            await _next(context);
+            await dbContext.SaveChangesAsync();
         }
+        await _next(context);
     }
 }

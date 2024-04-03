@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jJmciUc/iV+d2+1MXigGRfdw3j4hBlKOLaRCWNHGKMnlOcy98rcCaNjRvAansbiuh/1Lyxeo1Y1wjvybqygnDA==",
+  "dgSpecHash": "WBPOljDoteq2PR8JsMX2OgaZzqq7ihB/gbfew84KVX7Ojd7BavsZ0e2f7my0FnM6PgHjIJ9lhVhynWTv1MuKWw==",
   "success": true,
   "projectFilePath": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,9 @@
     "/Users/markuskarlsson/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/Users/markuskarlsson/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
-    "/Users/markuskarlsson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
+    "/Users/markuskarlsson/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist/9.1.2/x.pagedlist.9.1.2.nupkg.sha512",
+    "/Users/markuskarlsson/.nuget/packages/x.pagedlist.mvc.core/9.1.2/x.pagedlist.mvc.core.9.1.2.nupkg.sha512"
   ],
   "logs": []
 }

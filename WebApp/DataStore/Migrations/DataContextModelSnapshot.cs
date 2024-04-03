@@ -17,6 +17,21 @@ namespace DataStore.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
+            modelBuilder.Entity("Infrastructure.Entities.CategoryEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Infrastructure.Entities.CourseEntity", b =>
                 {
                     b.Property<string>("Id")
@@ -26,13 +41,16 @@ namespace DataStore.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("CourseImageUrl")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("CourseNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("DiscountPrice")
+                    b.Property<string>("DiscountPrice")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Hours")
@@ -44,13 +62,14 @@ namespace DataStore.Migrations
                     b.Property<bool>("IsDigital")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("LikesInNumbers")
+                    b.Property<string>("LikesInNumbers")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("LikesInProcent")
+                    b.Property<decimal?>("LikesInProcent")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("OriginalPrice")
+                    b.Property<string>("OriginalPrice")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
@@ -58,6 +77,8 @@ namespace DataStore.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Courses");
                 });
@@ -111,6 +132,9 @@ namespace DataStore.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("TEXT");
@@ -264,6 +288,15 @@ namespace DataStore.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Infrastructure.Entities.CourseEntity", b =>
+                {
+                    b.HasOne("Infrastructure.Entities.CategoryEntity", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

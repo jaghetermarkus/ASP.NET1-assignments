@@ -504,6 +504,47 @@ form input[type=checkbox]::before {
 form input[type=checkbox]:checked::before {
   border-color: var(--color-white);
 }
+form .select {
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: right 1rem center;
+  width: 100%;
+  max-width: 15rem;
+  padding: 0.8rem 2rem 0.8rem 1rem;
+  width: 100%;
+  font-family: var(--font-manrope);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-gray-700);
+  font-size: var(--font-body-s);
+  font-weight: var(--font-weight-regular);
+}
+form .select .selected {
+  cursor: pointer;
+}
+form .select .select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-family: var(--font-manrope);
+  border: 1px solid var(--color-gray-400);
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  z-index: 20;
+}
+form .select .select-options .option {
+  padding: 0.8rem 2rem 0.8rem 1rem;
+  cursor: pointer;
+}
+form .select .select-options .option:hover {
+  background-color: var(--color-gray-400);
+}
 form .btn-container {
   display: flex;
   gap: 1rem;
@@ -674,7 +715,10 @@ header .container .profile-image {
 }
 header .container .profile-image .profile-picture {
   width: 44px;
-  height: auto;
+  height: 44px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .container .account-buttons {
   grid-area: accounts;
@@ -1707,12 +1751,18 @@ footer .container-small .copyright {
   align-items: center;
 }
 .profile-menu .container-profile-menu .profile-info .image-box {
-  padding-top: 2.5rem;
   position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-width: 120px;
+  max-height: 120px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.profile-menu .container-profile-menu .profile-info .image-box .profile-picture {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .profile-menu .container-profile-menu .profile-info .image-box i {
   position: absolute;
@@ -1987,7 +2037,6 @@ footer .container-small .copyright {
 .courses-page .container .courses-header .content-container .filters {
   display: flex;
   gap: 1.5rem;
-  width: 570px;
 }
 .courses-page .container .courses-header .content-container .filters input,
 .courses-page .container .courses-header .content-container .filters select {
@@ -2017,6 +2066,7 @@ footer .container-small .copyright {
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: right 1rem center;
+  max-width: 19rem;
 }
 .courses-page .container .courses-wrapper {
   display: grid;

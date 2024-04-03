@@ -1,12 +1,22 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Infrastructure.Models;
+using DataStore.Contexts;
+using Infrastructure.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.VisualBasic;
+using WebApp.Services;
 
 namespace WebApp.Controllers;
 
 [Authorize]
-public class AccountController : Controller
+public class AccountController(UserManager<UserEntity> userManager, AccountService accountService) : Controller
 {
+
+    private readonly UserManager<UserEntity> _userManager = userManager;
+    private readonly AccountService _accountService = accountService;
+
+
     #region Account Basic
     [HttpGet]
     [Route("/account/basic")]
@@ -55,6 +65,7 @@ public class AccountController : Controller
     [Route("/account/details")]
     public IActionResult Details()
     {
+
         return View();
     }
     #endregion
@@ -69,7 +80,7 @@ public class AccountController : Controller
     }
     #endregion
 
-        #region Password
+    #region Password
     [HttpGet]
     [Route("/security/password")]
     public IActionResult Password()
@@ -112,4 +123,12 @@ public class AccountController : Controller
     }
     #endregion
 
+
+    [HttpPost]
+    public async Task<IActionResult> ProfileImageUpload(IFormFile file)
+    {
+        var result = await _accountService.UploadUserProfileImageAsync(User, file);
+
+        return RedirectToAction("Details", "Account");
+    }
 }

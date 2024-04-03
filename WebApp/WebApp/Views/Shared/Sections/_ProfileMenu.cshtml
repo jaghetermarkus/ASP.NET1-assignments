@@ -1,12 +1,22 @@
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+
 <section class="profile-menu">
     <div class="container-profile-menu">
         <div class="profile-info">
             <div class="image-box">
-                <img src="/images/profile-picture.png" alt="profile picture" class="profile-picture">
-                <i class="fa-sharp fa-solid fa-arrows-rotate-reverse"></i>
+                <img src="/images/uploads/@user?.ProfileImage" alt="profile picture" class="profile-picture">
+                <form enctype="multipart/form-data" method="post" asp-action="ProfileImageUpload" asp-controller="Account">
+                    <input id="fileUploader" type="file" name="file" hidden >
+                    <label for="fileUploader">
+                        @* <i class="fa-sharp fa-solid fa-arrows-rotate-reverse"></i> *@
+                        <i class="fa-regular fa-refresh"></i>
+                    </label>
+                </form>
             </div>
-            <h5>John Doe</h5>
-            <p>john.doe@domain.com</p>
+            <h5>@user?.FirstName @user?.LastName</h5>
+            <p>@user?.Email</p>
         </div>
         <ul class="account-navigation">
             <li class="account">

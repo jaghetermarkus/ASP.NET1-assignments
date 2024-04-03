@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "CategoryName": "Web Development"
+  },
+  {
+    "Id": 2,
+    "CategoryName": "Frontend Development"
+  },
+  {
+    "Id": 3,
+    "CategoryName": "Python"
+  },
+  {
+    "Id": 4,
+    "CategoryName": "Game Development"
+  },
+  {
+    "Id": 5,
+    "CategoryName": "App Development"
+  }
+]
