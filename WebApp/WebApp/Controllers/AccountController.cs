@@ -6,6 +6,8 @@ using Infrastructure.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.VisualBasic;
 using WebApp.Services;
+using WebApp.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace WebApp.Controllers;
 
@@ -27,14 +29,22 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
 
     [HttpPost]
     [Route("/account/basic")]
-    public IActionResult BasicInfo(BasicInfoViewModel viewModel)
+    public async Task<IActionResult> BasicInfo(AccountDetailsViewModel viewModel)
     {
-        if (ModelState.IsValid)
+
+        try
         {
-
+            if (viewModel.BasicInfo != null)
+            {
+                if (!string.IsNullOrEmpty(viewModel.BasicInfo.FirstName) && !string.IsNullOrEmpty(viewModel.BasicInfo.LastName))
+                {
+                    var updateResult = await _accountService.UpdateBasicInfoAsync(User, viewModel.BasicInfo);
+                }
+            }
         }
+        catch { }
 
-        return View(viewModel);
+        return RedirectToAction("Details", "Account");
     }
     #endregion
 
@@ -48,14 +58,21 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
 
     [HttpPost]
     [Route("/account/address")]
-    public IActionResult Address(BasicInfoViewModel viewModel)
+    public async Task<IActionResult> Address(AccountDetailsViewModel viewModel)
     {
-        if (ModelState.IsValid)
+        try
         {
-
+            if (viewModel.AddressInfo != null)
+            {
+                if (!string.IsNullOrEmpty(viewModel.AddressInfo.AddressLine_1) && !string.IsNullOrEmpty(viewModel.AddressInfo.PostalCode) && !string.IsNullOrEmpty(viewModel.AddressInfo.City))
+                {
+                    var updateResult = await _accountService.UpdateAddressAsync(User, viewModel.AddressInfo);
+                }
+            }
         }
+        catch { }
 
-        return View(viewModel);
+        return RedirectToAction("Details", "Account");
     }
     #endregion
 
@@ -63,10 +80,30 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
     #region Details
     [HttpGet]
     [Route("/account/details")]
-    public IActionResult Details()
+    public async Task<IActionResult> Details()
     {
+        var user = await _accountService.GetUserAsync(User);
 
-        return View();
+        var viewModel = new AccountDetailsViewModel
+        {
+            BasicInfo = new BasicInfoViewModel
+            {
+                FirstName = user.FirstName!,
+                LastName = user.LastName!,
+                Email = user.Email!,
+                PhoneNumber = user.PhoneNumber,
+                Biography = user.Biography
+            },
+            AddressInfo = new AddressModel
+            {
+                AddressLine_1 = user.AddressLine_1!,
+                AddressLine_2 = user.AddressLine_2!,
+                PostalCode = user.PostalCode!,
+                City = user.City!
+            }
+        };
+
+        return View(viewModel);
     }
     #endregion
 

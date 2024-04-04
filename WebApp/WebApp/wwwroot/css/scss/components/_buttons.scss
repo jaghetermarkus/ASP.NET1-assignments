@@ -60,6 +60,9 @@
 @mixin glow-danger {
   box-shadow: 0px 8px 18px -8px rgba(239, 68, 68, 0.9);
 }
+@mixin glow-info {
+  box-shadow: 0px 8px 18px -8px rgba(76, 130, 247, 0.9);
+}
 
 @mixin glow-input {
   box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.2);

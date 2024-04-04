@@ -1,6 +1,4 @@
-﻿using Infrastructure.Models;
-
-namespace Infrastructure;
+﻿namespace Infrastructure.Factories;
 
 public class CourseFactory
 {

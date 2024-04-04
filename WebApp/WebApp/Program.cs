@@ -18,14 +18,17 @@ builder.Services.AddDefaultIdentity<UserEntity>(x =>
     x.Password.RequiredLength = 8;
 }).AddEntityFrameworkStores<DataContext>();
 
+builder.Services.AddSession();
+
 var app = builder.Build();
-app.UseExceptionHandler("/Home/Error");
+app.UseExceptionHandler("/Error");
 app.UseHsts();
 app.UseMiddleware<CoursesMiddleware>();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
+app.UseSession();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Default}/{action=Index}/{id?}");

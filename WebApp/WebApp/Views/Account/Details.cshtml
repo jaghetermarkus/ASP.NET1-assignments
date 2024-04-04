@@ -1,8 +1,12 @@
+@model AccountDetailsViewModel
+
 <div class="account-container">
     <partial name="~/Views/Shared/Sections/_ProfileMenu.cshtml" />
 <div class="settings-container">
     @* <partial name="~/Views/Shared/Sections/_BasicInfo.cshtml" /> *@
-    <partial name="~/Views/Account/BasicInfo.cshtml" />
-    <partial name="~/Views/Shared/Sections/_Address.cshtml" />
+    @await Html.PartialAsync("~/Views/Account/BasicInfo.cshtml", Model) 
+    @await Html.PartialAsync("~/Views/Account/Address.cshtml", Model) 
+    @* <partial name="~/Views/Account/BasicInfo.cshtml" />
+    <partial name="~/Views/Account/Address.cshtml" /> *@
 </div>
 </div>

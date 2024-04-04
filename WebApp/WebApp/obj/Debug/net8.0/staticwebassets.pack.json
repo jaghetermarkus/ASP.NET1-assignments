@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets/css/scss/sections/_signup.scss"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_singlecourse.scss",
+      "PackagePath": "staticwebassets/css/scss/sections/_singlecourse.scss"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_testsection.scss",
       "PackagePath": "staticwebassets/css/scss/sections/_testsection.scss"
     },
@@ -169,6 +173,10 @@
       "PackagePath": "staticwebassets/images/appstore.svg"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/author-background.png",
+      "PackagePath": "staticwebassets/images/author-background.png"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/bell.svg",
       "PackagePath": "staticwebassets/images/bell.svg"
     },
@@ -187,6 +195,10 @@
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/chat.svg",
       "PackagePath": "staticwebassets/images/chat.svg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-author.png",
+      "PackagePath": "staticwebassets/images/course-author.png"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-css-drawing.png",
@@ -319,6 +331,10 @@
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/shield.svg",
       "PackagePath": "staticwebassets/images/shield.svg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/single-course.png",
+      "PackagePath": "staticwebassets/images/single-course.png"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/slack-icon.svg",

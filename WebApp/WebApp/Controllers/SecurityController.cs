@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Infrastructure.Models;
+using WebApp.Models;
 
 namespace WebApp.Controllers;
 
@@ -15,11 +16,11 @@ public class SecurityController : Controller
 
     [HttpPost]
     [Route("/security/password")]
-    public IActionResult Password(PasswordViewModel viewModel)
+    public IActionResult ChangePassword(PasswordViewModel viewModel)
     {
         if (ModelState.IsValid)
         {
-
+            
         }
 
         return View(viewModel);

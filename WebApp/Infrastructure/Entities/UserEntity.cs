@@ -11,4 +11,7 @@ public class UserEntity : IdentityUser
     public string LastName { get; set; } = null!;
 
     public string? ProfileImage { get; set; } = "default_avatar.jpg";
+    public string? Biography { get; set; }
+    public int? AddressId { get; set; }
+    public AddressEntity? Address { get; set; }
 }

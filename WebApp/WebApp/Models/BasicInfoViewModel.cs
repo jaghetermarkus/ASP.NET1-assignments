@@ -33,5 +33,5 @@ public class BasicInfoViewModel
     [Display(Name = "Bio", Prompt = "Add a short bio...")]
     [StringLength(200, ErrorMessage = "Bio cannot exceed 200 characters")]
     [DataType(DataType.Text)]
-    public string? Bio { get; set; }
+    public string? Biography { get; set; }
 }

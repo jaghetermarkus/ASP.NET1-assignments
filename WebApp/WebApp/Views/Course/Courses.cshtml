@@ -21,7 +21,7 @@
                 <form id="courseFilterForm" asp-action="Courses" asp-controller="Course" method="get" class="filters">
 
                     <div class="select">
-                        <div class="selected">All categories</div>
+                        <div class="selected">All Categories</div>
                         <div class="select-options">
                             <div class="option" data-value="all">All categories</div> 
                                 @if (Model.Categories != null)
@@ -37,27 +37,29 @@
                     @* <select name="category" id="category"></select> *@
                     <input type="hidden" name="category" id="selectedCategory" value="all">
                     <input type="search" placeholder="Search courses" name="searchString" id="searchString">
-                    <button type="submit">Search</button>
+                    @* <button type="submit">Search</button> *@
                 </form>
             </div>
         </div>
 
         <div class="courses-wrapper">
-            @foreach (var course in Model.Courses)
-            {
-                @* ViewData["Course"] = course; *@
-                
-                @await Html.PartialAsync("~/Views/Partials/_CourseCard.cshtml", course) 
+            @if (Model.Courses != null) {
+                @foreach (var course in Model.Courses)
+                {
+                    @* ViewData["Course"] = course; *@
+                    
+                    @await Html.PartialAsync("~/Views/Partials/_CourseCard.cshtml", course) 
+                }
             }
         </div>
-        <div class="page-seletor">
+        @* <div class="page-seletor">
             <i class="fa-solid fa-angle-left"></i>
             <p>1</p>
             <p>2</p>
             <p class="active-page">3</p>
             <p>4</p>
             <i class="fa-solid fa-angle-right"></i>
-        </div>
+        </div> *@
         
 
 @Html.PagedListPager(Model.Courses, page => Url.Action("Courses", "Course", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })

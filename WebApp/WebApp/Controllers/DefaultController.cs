@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Infrastructure.Models;
+using WebApp.Models;
 
 namespace WebApp.Controllers;
 
@@ -21,11 +21,9 @@ public class DefaultController : Controller
     {
         if (statusCode.HasValue && statusCode.Value == 404)
         {
-            // Visa en särskild vy för 404-fel (sidan hittades inte)
             return View("Error");
         }
 
-        // Visa standard error-sidan för andra typer av fel
         return View("Error");
     }
 

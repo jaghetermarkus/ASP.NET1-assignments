@@ -1,9 +1,9 @@
-﻿using Infrastructure;
-using Infrastructure.Entities;
-using Infrastructure.Models;
+﻿using Infrastructure.Entities;
+using Infrastructure.Factories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApp.Models;
 
 namespace WebApp.Controllers;
 
@@ -60,16 +60,8 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
             if (!await _userManager.Users.AnyAsync(x => x.Email == viewModel.Email))
             {
                 var userEntity = UserFactory.Create(viewModel);
-
-                // var userEntity = new UserEntity
-                // {
-                //     FirstName = viewModel.FirstName,
-                //     LastName = viewModel.LastName,
-                //     Email = viewModel.Email,
-                //     UserName = viewModel.Email,
-                // };
-
                 var result = await _userManager.CreateAsync(userEntity, viewModel.Password);
+
                 if (result.Succeeded)
                 {
                     return RedirectToAction("SignIn", "Auth");

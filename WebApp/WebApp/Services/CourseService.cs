@@ -18,6 +18,20 @@ public class CourseService(DataContext context)
         return null!;
     }
 
+    public async Task<CourseEntity> GetOneCourseAsync(string id)
+    {
+        try
+        {
+            var entity = await _context.Courses.FirstOrDefaultAsync(x => x.Id == id);
+            if (entity != null)
+            {
+                return entity;
+            }
+        }
+        catch { }
+        return null!;
+    }
+
 
 
 }

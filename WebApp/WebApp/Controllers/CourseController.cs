@@ -14,21 +14,11 @@ public class CourseController(CourseService courseService, DataContext context) 
     private readonly CourseService _courseService = courseService;
     private readonly DataContext _context = context;
 
-    // [Route("/courses")]
-    // public async Task<IActionResult> Courses()
-    // {
-    //     var courses = await _courseService.GetAllCoursesAsync();
-
-    //     ViewBag.Courses = courses;
-    //     return View();
-    // }
-
-    [Route("/courses/{page?}")]
+    [Route("/course/courses/{page?}")]
 
     public async Task<IActionResult> Courses(string sortOrder, string searchString, string currentFilter, string category, int? page)
     {
         ViewBag.CurrentSort = sortOrder;
-        // ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
 
         if (searchString != null)
             page = 1;
@@ -51,19 +41,7 @@ public class CourseController(CourseService courseService, DataContext context) 
             coursesQuery = coursesQuery.Where(c => c.Category.CategoryName.ToLower() == category.ToLower());
         }
 
-        // switch (sortOrder)
-        // {
-        //     case "name_desc":
-        //         courses = courses.OrderByDescending(s => s.Author);
-        //         break;
-        //     default:
-        //         courses = courses.OrderBy(s => s.Author);
-        //         break;
-        // }
-
-        // var coursesList = await courses.ToListAsync();
-
-        int pageSize = 3;
+        int pageSize = 6;
         int pageNumber = (page ?? 1);
 
         var courses = coursesQuery.ToPagedList(pageNumber, pageSize);
@@ -75,25 +53,15 @@ public class CourseController(CourseService courseService, DataContext context) 
             Categories = categories
         };
 
-
         return View(viewModel);
     }
 
-
-    public override bool Equals(object? obj)
+    [Route("/course/{page?}")]
+    public async Task<IActionResult> SingleCourse(string id)
     {
-        return obj is CourseController controller &&
-               EqualityComparer<DataContext>.Default.Equals(_context, controller._context);
+        var course = await _courseService.GetOneCourseAsync(id);
+
+        return View(course);
     }
 
-    [Route("/course")]
-    public IActionResult SingleCourse()
-    {
-        return View();
-    }
-
-    public override int GetHashCode()
-    {
-        throw new NotImplementedException();
-    }
 }

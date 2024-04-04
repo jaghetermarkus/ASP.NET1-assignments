@@ -1,4 +1,4 @@
-@model AddressViewModel
+@* @model AddressViewModel
 @{
     ViewData["Title"] = "Address";
 }
@@ -8,35 +8,35 @@
             <h5 class="form-sub-title">Address</h5>
             
             <div class="input-group settings-wrapper">
-                <label asp-for="Address1"></label>
-                <input asp-for="Address1">
-                <span asp-validation-for="Address1"></span>
+                <label asp-for="AddressLine_1"></label>
+                <input asp-for="AddressLine_1">
+                <span asp-validation-for="AddressLine_1"></span>
             </div>
             
             <div class="input-group">
-                <label asp-for="Address2"></label>
-                <input asp-for="Address2">
-                <span asp-validation-for="Address2"></span>
+                <label asp-for="AddressLine_2"></label>
+                <input asp-for="AddressLine_2">
+                <span asp-validation-for="AddressLine_2"></span>
             </div>
             
             <div class="input-group-container">
                 <div class="input-group">
-                    <label asp-for="Address1"></label>
-                    <input asp-for="Address1">
-                    <span asp-validation-for="Address1"></span>
+                    <label asp-for="PostalCode"></label>
+                    <input asp-for="PostalCode">
+                    <span asp-validation-for="PostalCode"></span>
                 </div>
                 <div class="input-group">
-                    <label asp-for="Address1"></label>
-                    <input asp-for="Address1">
-                    <span asp-validation-for="Address1"></span>
+                    <label asp-for="City"></label>
+                    <input asp-for="City">
+                    <span asp-validation-for="City"></span>
                 </div>
             </div>
 
             <div class="btn-container">
-                <button class="btn-gray cancel-btn" type="submit">Cancel</button>
+                <button class="btn-gray cancel-btn" type="reset">Cancel</button>
                 <button class="btn-theme save-changes-btn" type="submit">Save changes</button>
             </div>
 
         </form>
     </div>
-</section>
+</section> *@
