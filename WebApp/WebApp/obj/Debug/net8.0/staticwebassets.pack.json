@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/css/scss/_sections.scss"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/components/_alerts.scss",
+      "PackagePath": "staticwebassets/css/scss/components/_alerts.scss"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/components/_buttons.scss",
       "PackagePath": "staticwebassets/css/scss/components/_buttons.scss"
     },
@@ -359,6 +363,10 @@
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/default_avatar.jpg",
       "PackagePath": "staticwebassets/images/uploads/default_avatar.jpg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_1dbc02a0-41d3-4bb6-afa2-2614f6d4cd10_efc03b00-d341-46f6-92fb-84f5b9998ed2.jpg",
+      "PackagePath": "staticwebassets/images/uploads/pImg_1dbc02a0-41d3-4bb6-afa2-2614f6d4cd10_efc03b00-d341-46f6-92fb-84f5b9998ed2.jpg"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_978cdff6-c7f3-41a2-80f4-ba481cfdb479.jpg",

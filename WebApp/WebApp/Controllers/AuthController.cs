@@ -17,6 +17,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     [Route("/signin")]
     public IActionResult SignIn()
     {
+        ViewData["SuccessMessage"] = TempData["SuccessMessage"];
+        ViewData["ErrorMessage"] = TempData["ErrorMessage"];
+
         return View();
     }
 
@@ -37,7 +40,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
             }
         }
 
-        ViewData["StatusMessage"] = "Incorrect email or password";
+        ViewData["ErrorMessage"] = "Incorrect email or password";
 
         return View(viewModel);
     }
@@ -64,16 +67,17 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
                 if (result.Succeeded)
                 {
+                    TempData["SuccessMessage"] = "Your new account was successfully created.";
                     return RedirectToAction("SignIn", "Auth");
                 }
                 else
                 {
-                    ViewData["StatusMessage"] = "Something went wrong, please try again.";
+                    ViewData["ErrorMessage"] = "Something went wrong, please try again.";
                 }
             }
             else
             {
-                ViewData["StatusMessage"] = "User with this email already exists.";
+                ViewData["ErrorMessage"] = "User with this email already exists.";
             }
         }
 

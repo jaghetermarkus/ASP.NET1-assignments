@@ -1,0 +1,29 @@
+.alert {
+  border-radius: 0.25rem;
+  display: inline-block;
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+  max-width: fit-content;
+}
+
+.alert-success {
+  color: var(--color-success);
+  font-weight: var(--font-weight-regular);
+  background-color: rgba(34, 197, 94, 0.12);
+}
+
+.alert-warning {
+  background: #f7f5b7;
+  color: #6d6e54;
+}
+
+.alert-danger {
+  background: #ffcabf;
+  color: #574c4a;
+}
+
+.alert-error {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-regular);
+  background-color: rgba(239, 68, 68, 0.12);
+}

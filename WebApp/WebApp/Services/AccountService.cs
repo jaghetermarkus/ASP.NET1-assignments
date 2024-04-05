@@ -1,25 +1,28 @@
-﻿using System.Security.Claims;
+﻿using System.ComponentModel;
+using System.Security.Claims;
 using DataStore.Contexts;
 using Infrastructure.Entities;
 using Infrastructure.Factories;
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 using WebApp.Models;
 
 namespace WebApp.Services;
 
-public class AccountService(UserManager<UserEntity> userManager, DataContext context, IConfiguration configuration)
+public class AccountService(UserManager<UserEntity> userManager, DataContext context, IConfiguration configuration, PasswordHasher<UserEntity> passwordHasher)
 {
 
     private readonly UserManager<UserEntity> _userManager = userManager;
     private readonly DataContext _context = context;
     private readonly IConfiguration _configuration = configuration;
+    private readonly PasswordHasher<UserEntity> _passwordHasher = passwordHasher;
 
     public async Task<UserModel> GetUserAsync(ClaimsPrincipal claimsPrincipal)
     {
         var Identifer = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-        var userEntity = await _context.Users.Include(i => i.Address).FirstOrDefaultAsync(x => x.Id == Identifer);
+        var userEntity = await _context.Users.Include(a => a.Address).FirstOrDefaultAsync(x => x.Id == Identifer);
         if (userEntity != null)
         {
             return UserFactory.Create(userEntity!);
@@ -81,6 +84,69 @@ public class AccountService(UserManager<UserEntity> userManager, DataContext con
             await _context.SaveChangesAsync();
 
             return true;
+        }
+        catch { }
+        return false;
+    }
+
+    public async Task<bool> UpdatePasswordAsync(ClaimsPrincipal claimsPrincipal, PasswordViewModel viewModel)
+    {
+        try
+        {
+            var Identifer = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            var userEntity = await _context.Users.FirstOrDefaultAsync(x => x.Id == Identifer);
+            if (userEntity != null)
+            {
+
+                // IdentityResult result = await _userManager.ChangePasswordAsync(userEntity, viewModel.CurrentPassword, viewModel.NewPassword);
+
+                var isPasswordValid = await VerifyPasswordAsync(userEntity, viewModel.CurrentPassword);
+                if (isPasswordValid)
+                {
+                    var newPasswordHash = _passwordHasher.HashPassword(userEntity, viewModel.NewPassword);
+
+                    userEntity.PasswordHash = newPasswordHash;
+
+                    _context.Users.Update(userEntity);
+                    await _context.SaveChangesAsync();
+
+                    return true;
+                }
+            }
+        }
+        catch { }
+        return false;
+    }
+
+    public async Task<bool> DeleteUserAsync(ClaimsPrincipal claimsPrincipal)
+    {
+        try
+        {
+            var Identifer = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            var userEntity = await _context.Users.FirstOrDefaultAsync(x => x.Id == Identifer);
+            if (userEntity != null)
+            {
+                var result = await _userManager.DeleteAsync(userEntity);
+                return result.Succeeded;
+            }
+        }
+        catch { }
+        return false;
+    }
+
+    public async Task<bool> VerifyPasswordAsync(UserEntity user, string password)
+    {
+        try
+        {
+            var passwordHasher = _passwordHasher;
+            if (user.PasswordHash != null)
+            {
+                var result = await Task.Run(() =>
+                {
+                    return passwordHasher.VerifyHashedPassword(user, user.PasswordHash, password);
+                });
+                return result == PasswordVerificationResult.Success;
+            }
         }
         catch { }
         return false;

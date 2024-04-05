@@ -20,20 +20,23 @@
   });
 
   handleProfileImageUpload();
+  setActiveMenuItem();
 });
 
-var currentUrl = window.location.href;
+function setActiveMenuItem() {
+  var currentUrl = window.location.href;
 
-if (currentUrl.includes("details")) {
-  document.querySelector(".account").classList.add("active");
-} else if (currentUrl.includes("security")) {
-  document.querySelector(".security").classList.add("active");
-} else if (currentUrl.includes("SavedCourses")) {
-  document.querySelector(".courses").classList.add("active");
-} else if (currentUrl.includes("courses")) {
-  document.querySelector(".courses").classList.add("active");
-} else if (currentUrl.includes("contact")) {
-  document.querySelector(".contact").classList.add("active");
+  if (currentUrl.includes("details")) {
+    document.querySelector(".account").classList.add("active");
+  } else if (currentUrl.includes("security")) {
+    document.querySelector(".security").classList.add("active");
+  } else if (currentUrl.includes("SavedCourses")) {
+    document.querySelector(".courses").classList.add("active");
+  } else if (currentUrl.includes("courses")) {
+    document.querySelector(".courses").classList.add("active");
+  } else if (currentUrl.includes("contact")) {
+    document.querySelector(".contact").classList.add("active");
+  }
 }
 
 if (document.body.querySelector(".dark-mode")) {

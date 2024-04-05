@@ -119,44 +119,70 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
 
     #region Password
     [HttpGet]
-    [Route("/security/password")]
+    [Route("/account/password")]
     public IActionResult Password()
     {
+
+
         return View();
     }
 
     [HttpPost]
-    [Route("/security/password")]
-    public IActionResult Password(PasswordViewModel viewModel)
+    [Route("/account/password")]
+    public async Task<IActionResult> Password(PasswordViewModel viewModel)
     {
-        if (ModelState.IsValid)
+        try
         {
-
+            if (ModelState.IsValid)
+            {
+                var updateResult = await _accountService.UpdatePasswordAsync(User, viewModel);
+                if (updateResult)
+                {
+                    // TempData["SuccessMessage"] = "Password is successfully updated.";
+                    return RedirectToAction("Details", "Account");
+                }
+            }
         }
+        catch { }
 
-        return View(viewModel);
+        // TempData["ErrorMessage"] = "Something went wrong, password isn´t updated.";
+        return RedirectToAction("Security", "Account");
     }
     #endregion
 
 
     #region Delete account
     [HttpGet]
-    [Route("/security/deleteaccount")]
+    [Route("/account/deleteaccount")]
     public IActionResult DeleteAccount()
     {
         return View();
     }
 
     [HttpPost]
-    [Route("/security/deleteaccount")]
-    public IActionResult DeleteAccount(PasswordViewModel viewModel)
+    [Route("/account/deleteaccount")]
+    public async Task<IActionResult> DeleteAccount(DeleteAccountViewModel viewModel)
     {
-        if (ModelState.IsValid)
+        try
         {
+            if (ModelState.IsValid)
+            {
+                var deleteResult = await _accountService.DeleteUserAsync(User);
 
+                if (deleteResult)
+                {
+                    return RedirectToAction("SignOut", "Auth");
+                }
+                else
+                {
+                    return RedirectToAction("Security", "Account");
+                }
+            }
         }
+        catch { }
 
-        return View(viewModel);
+        return RedirectToAction("Security", "Account");
+
     }
     #endregion
 

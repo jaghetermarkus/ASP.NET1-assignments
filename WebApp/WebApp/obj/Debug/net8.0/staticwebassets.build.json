@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BzYmx4q2v4LF5e7l0SEG/6RzPdd9tUrbPWFTBR7KRMI=",
+  "Hash": "Szeh1jbv4Mi2yABbDa3LlcCPwN1UbXrwbXbNK0VsgN4=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/scss/_sections.scss"
+    },
+    {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/components/_alerts.scss",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/scss/components/_alerts.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/scss/components/_alerts.scss"
     },
     {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/components/_buttons.scss",
@@ -2865,6 +2884,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/uploads/default_avatar.jpg"
+    },
+    {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_1dbc02a0-41d3-4bb6-afa2-2614f6d4cd10_efc03b00-d341-46f6-92fb-84f5b9998ed2.jpg",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "images/uploads/pImg_1dbc02a0-41d3-4bb6-afa2-2614f6d4cd10_efc03b00-d341-46f6-92fb-84f5b9998ed2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/uploads/pImg_1dbc02a0-41d3-4bb6-afa2-2614f6d4cd10_efc03b00-d341-46f6-92fb-84f5b9998ed2.jpg"
     },
     {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_978cdff6-c7f3-41a2-80f4-ba481cfdb479.jpg",
