@@ -72,7 +72,7 @@ a:hover {
   --color-danger-bg: #f5d7da;
 }
 
-body.dark-mode {
+:root.dark {
   --color-black: #ffffff;
   --color-gray-900: #f3f6ff;
   --color-gray-800: #eff2fc;

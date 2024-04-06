@@ -2,6 +2,8 @@
 
 @{
     var user = await UserManager.GetUserAsync(User);
+    var theme = Context.Request.Cookies["theme"] ?? "light";
+    var isDarkMode = (theme == "dark") ? true :false;
 }
 
 <header>
@@ -24,7 +26,7 @@
         <div class="btn-switch">
             <label>Light</label>
             <label class="switch" for="switch-mode">
-                <input type="checkbox" id="switch-mode" class=".input-switch" />
+                <input type="checkbox" id="switch-mode" class="input-switch" checked="@isDarkMode" />
                 <div class="slider round"></div>
             </label>
             <label>Dark</label>
