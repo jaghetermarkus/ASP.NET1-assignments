@@ -1,0 +1,43 @@
+.cookie-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-gray-700);
+  z-index: 100;
+  padding: 2rem 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    @include sm {
+      flex-direction: row;
+      gap: 3rem;
+    }
+    .cookie-img {
+      display: none;
+      height: auto;
+      @include sm {
+        display: initial;
+        max-width: 4rem;
+      }
+    }
+    .cookie-text {
+      color: var(--color-gray-300);
+    }
+    .cookies-btn {
+      @include button-theme;
+      @include glow;
+      white-space: nowrap;
+      width: 100%;
+      &:hover {
+        @include button-standard-hover;
+      }
+      @include sm {
+        width: fit-content;
+      }
+    }
+  }
+}

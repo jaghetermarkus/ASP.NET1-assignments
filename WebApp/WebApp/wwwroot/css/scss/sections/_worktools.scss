@@ -1,5 +1,5 @@
 .work-tools {
-  background-color: var(--color-white);
+  background-color: var(--color-gray-000);
   .container {
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     }
     p {
       margin: 1.5rem 0 3.5rem;
-      color: var(--color-gray-600);
+      color: var(--color-gray-500);
       font-size: var(--font-body-l);
       font-weight: var(--font-weight-regular);
       max-width: 850px;
@@ -42,7 +42,7 @@
         }
 
         &:hover {
-          background-color: var(--color-white);
+          background-color: var(--color-gray-100);
           cursor: pointer;
           border-radius: 0.5rem;
           box-shadow: 0 0 10px var(--color-gray-200);
@@ -54,7 +54,7 @@
         .work-tools-description {
           font-size: var(--font-body-m);
           font-weight: var(--font-weight-regular);
-          color: var(--color-gray-700);
+          color: var(--color-gray-600);
           text-align: start;
           margin: 1.5rem 0 0;
         }

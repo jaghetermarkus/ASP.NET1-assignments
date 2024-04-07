@@ -70,7 +70,7 @@
       }
 
       .management-btn {
-        @include button;
+        @include button-theme;
         width: 100%;
         @include lg {
           width: fit-content;
@@ -79,6 +79,10 @@
           margin-left: 0.8rem;
         }
         white-space: nowrap;
+        &:hover {
+          @include button-standard-hover;
+          @include glow;
+        }
       }
     }
   }

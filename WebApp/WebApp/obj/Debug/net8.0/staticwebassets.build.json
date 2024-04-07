@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Szeh1jbv4Mi2yABbDa3LlcCPwN1UbXrwbXbNK0VsgN4=",
+  "Hash": "aceACHkSH/AW6j+Fy2djD+tMNdB+q74zAiNqib+1aXo=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -1442,6 +1442,25 @@
       "OriginalItemSpec": "wwwroot/css/scss/sections/_contact.scss"
     },
     {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_cookies.scss",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/scss/sections/_cookies.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/scss/sections/_cookies.scss"
+    },
+    {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_coursecard.scss",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
@@ -2107,6 +2126,25 @@
       "OriginalItemSpec": "wwwroot/images/chat.svg"
     },
     {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/cookies.svg",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "images/cookies.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cookies.svg"
+    },
+    {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/course-author.png",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
@@ -2468,12 +2506,12 @@
       "OriginalItemSpec": "wwwroot/images/icon-cross.svg"
     },
     {
-      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/logo-solid.svg",
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/logo-solid-dark.svg",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
       "BasePath": "_content/WebApp",
-      "RelativePath": "images/logo-solid.svg",
+      "RelativePath": "images/logo-solid-dark.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2484,7 +2522,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/logo-solid.svg"
+      "OriginalItemSpec": "wwwroot/images/logo-solid-dark.svg"
+    },
+    {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/logo-solid-light.svg",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "images/logo-solid-light.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logo-solid-light.svg"
     },
     {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/logoipsum1.svg",
@@ -3036,6 +3093,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/theme.js"
+    },
+    {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/validation.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "js/validation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/validation.js"
     }
   ]
 }

@@ -1,0 +1,25 @@
+@if (Context.Request.Cookies["consent"] == null)
+{
+    <div id="cookie-consent" class="cookie-container">
+        <div class="container">
+            <img class="cookie-img" src="/images/cookies.svg" alt="cookies picture">
+            <span class="cookie-text">We've baked some cookies that we'd like to offer you. They'll enhance your user experience significantly (and they're delicious too). Would you like to accept them?</span>
+            <button onclick="acceptCookies()" class="cookies-btn">Give me cookies!</button>
+        </div>
+    </div>   
+}
+<script>
+    function acceptCookies() {
+        try {
+            document.querySelector('#cookie-consent').style.display = 'none'
+
+            fetch(`/sitesettings/consentcookies`, {
+                method: 'post',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+        }
+        catch { }
+    }
+</script>
