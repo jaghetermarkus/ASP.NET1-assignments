@@ -6,8 +6,9 @@ using Infrastructure.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.VisualBasic;
 using WebApp.Services;
-using WebApp.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Diagnostics;
+using Infrastructure.Models.ViewModels;
 
 namespace WebApp.Controllers;
 
@@ -34,17 +35,20 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
 
         try
         {
-            if (viewModel.BasicInfo != null)
+            if (TryValidateModel(viewModel.BasicInfo!))
             {
-                if (!string.IsNullOrEmpty(viewModel.BasicInfo.FirstName) && !string.IsNullOrEmpty(viewModel.BasicInfo.LastName))
+                if (!string.IsNullOrEmpty(viewModel.BasicInfo!.FirstName) && !string.IsNullOrEmpty(viewModel.BasicInfo.LastName))
                 {
                     var updateResult = await _accountService.UpdateBasicInfoAsync(User, viewModel.BasicInfo);
                 }
             }
         }
-        catch { }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex.Message);
+        }
 
-        return RedirectToAction("Details", "Account");
+        return View("Details", viewModel);
     }
     #endregion
 
@@ -90,7 +94,7 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
             {
                 FirstName = user.FirstName!,
                 LastName = user.LastName!,
-                Email = user.Email!,
+                // Email = user.Email!,
                 PhoneNumber = user.PhoneNumber,
                 Biography = user.Biography
             },

@@ -11,7 +11,46 @@
     "LikesInProcent": 94,
     "LikesInNumbers": "4.2",
     "CourseImageUrl": "course-fullstack.png",
-    "CategoryId": 1
+    "CategoryId": 1,
+    "Reviews": "1.2",
+    "Articles": 18,
+    "Downloads": 25,
+    "Subscribers": 240,
+    "Followers": 180,
+    "Description": "This comprehensive course covers everything you need to become a skilled fullstack web developer. From HTML and CSS basics to advanced JavaScript concepts and server-side programming with Node.js, this course will equip you with the knowledge and skills to build professional web applications from scratch.",
+    "Learn": [
+      "Build responsive web pages with HTML and CSS.",
+      "Create interactive web applications using JavaScript.",
+      "Understand server-side programming with Node.js.",
+      "Develop RESTful APIs for your web applications.",
+      "Deploy and manage web applications on cloud platforms."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction. Getting started",
+        "Description": "In this introductory module, you'll get an overview of the course objectives and structure. You'll also set up your development environment and get familiar with essential tools."
+      },
+      {
+        "Title": "The ultimate HTML developer: advanced HTML",
+        "Description": "This module dives deep into advanced HTML topics such as semantic markup, HTML forms, and accessibility. You'll learn how to create well-structured and accessible web pages that are optimized for search engines."
+      },
+      {
+        "Title": "CSS & CSS3: basic",
+        "Description": "Explore CSS syntax and learn how to style your web pages effectively. This module covers basic CSS properties, layout techniques, and CSS3 features like animations and transitions."
+      },
+      {
+        "Title": "JavaScript basics for beginners",
+        "Description": "Get started with JavaScript programming language and learn its fundamental concepts such as variables, data types, and control structures. You'll also explore DOM manipulation and event handling."
+      },
+      {
+        "Title": "Understanding APIs",
+        "Description": "Learn how to design and develop RESTful APIs using Node.js and Express framework. You'll understand the principles of API design, implement CRUD operations, and handle authentication and authorization."
+      },
+      {
+        "Title": "C# and .NET from beginner to advanced",
+        "Description": "This module introduces you to server-side programming with C# and .NET framework. You'll learn how to build robust and scalable web applications using ASP.NET MVC, Entity Framework, and other .NET technologies."
+      }
+    ]
   },
   {
     "CourseNumber": 2,
@@ -25,7 +64,32 @@
     "LikesInProcent": 92,
     "LikesInNumbers": "3.1",
     "CourseImageUrl": "course-webdevelop.png",
-    "CategoryId": 1
+    "CategoryId": 1,
+    "Reviews": "1.1",
+    "Articles": 15,
+    "Downloads": 22,
+    "Subscribers": 200,
+    "Followers": 150,
+    "Description": "Become a proficient web developer with this HTML, CSS, and JavaScript course. Whether you're a complete beginner or have some experience, this course will take you from basic concepts to advanced techniques in web development.",
+    "Learn": [
+      "Master HTML5 and CSS3 for creating modern web pages.",
+      "Develop interactive web applications with JavaScript and jQuery.",
+      "Understand responsive web design and mobile-first approach."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction to HTML",
+        "Description": "This module covers the basics of HTML, including elements, attributes, and document structure. You'll learn how to create well-formed HTML documents and use semantic markup for better accessibility and SEO."
+      },
+      {
+        "Title": "Styling with CSS",
+        "Description": "Explore CSS syntax and learn how to style your web pages effectively. This module covers basic and advanced CSS techniques, including selectors, box model, layout techniques, and CSS3 features like flexbox and grid."
+      },
+      {
+        "Title": "JavaScript Fundamentals",
+        "Description": "Get started with JavaScript programming language and learn its core concepts such as variables, data types, and control flow. You'll also explore DOM manipulation, event handling, and asynchronous programming."
+      }
+    ]
   },
   {
     "CourseNumber": 3,
@@ -39,7 +103,32 @@
     "LikesInProcent": 98,
     "LikesInNumbers": "2.7",
     "CourseImageUrl": "course-frontend.png",
-    "CategoryId": 2
+    "CategoryId": 2,
+    "Reviews": "1.4",
+    "Articles": 22,
+    "Downloads": 30,
+    "Subscribers": 300,
+    "Followers": 250,
+    "Description": "Master the art of front-end web development with this comprehensive course. From HTML and CSS basics to advanced JavaScript frameworks like React and Vue.js, this course covers everything you need to build modern and responsive web applications.",
+    "Learn": [
+      "Build responsive and mobile-friendly websites with HTML5 and CSS3.",
+      "Create dynamic and interactive user interfaces with JavaScript and jQuery.",
+      "Understand front-end frameworks like React, Vue.js, and Angular for building scalable web applications."
+    ],
+    "Details": [
+      {
+        "Title": "HTML5 Essentials",
+        "Description": "This module explores the latest features and capabilities of HTML5, including semantic markup, audio and video elements, canvas API, and offline web applications. You'll learn how to leverage HTML5 features to create modern and interactive web experiences."
+      },
+      {
+        "Title": "Advanced CSS Techniques",
+        "Description": "Dive deep into advanced CSS techniques such as flexbox, grid layout, CSS animations, and responsive design. You'll learn how to create stunning and responsive web designs that adapt to different screen sizes and devices."
+      },
+      {
+        "Title": "JavaScript Mastery",
+        "Description": "Become proficient in JavaScript programming language and understand its advanced concepts such as closures, prototypes, and ES6 features. You'll also explore front-end frameworks like React and Vue.js for building dynamic and SPA."
+      }
+    ]
   },
   {
     "CourseNumber": 4,
@@ -53,7 +142,32 @@
     "LikesInProcent": 92,
     "LikesInNumbers": "3.1",
     "CourseImageUrl": "course-iOS-Swift.png",
-    "CategoryId": 5
+    "CategoryId": 5,
+    "Reviews": "1.3",
+    "Articles": 20,
+    "Downloads": 28,
+    "Subscribers": 250,
+    "Followers": 200,
+    "Description": "Become an expert in iOS app development using Swift programming language. Whether you're a beginner or have some experience, this course will teach you everything you need to build and deploy iOS apps from scratch.",
+    "Learn": [
+      "Master Swift programming language for iOS development.",
+      "Understand iOS app design and development best practices.",
+      "Build and publish your own iOS apps to the App Store."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction to iOS Development",
+        "Description": "Get started with iOS app development and Xcode IDE. You'll learn how to set up your development environment, create a new project, and build your first iOS app."
+      },
+      {
+        "Title": "Swift Programming Basics",
+        "Description": "Learn the fundamentals of Swift programming language, including variables, data types, control flow, and functions. You'll also explore Swift syntax and best practices for writing clean and maintainable code."
+      },
+      {
+        "Title": "Building UI with UIKit",
+        "Description": "Explore UIKit framework for building user interfaces in iOS apps. You'll learn how to design and layout UI elements, handle user interactions, and navigate between different screens."
+      }
+    ]
   },
   {
     "CourseNumber": 5,
@@ -67,7 +181,32 @@
     "LikesInProcent": 92,
     "LikesInNumbers": "3.1",
     "CourseImageUrl": "course-python.png",
-    "CategoryId": 3
+    "CategoryId": 3,
+    "Reviews": "1.5",
+    "Articles": 25,
+    "Downloads": 35,
+    "Subscribers": 350,
+    "Followers": 300,
+    "Description": "Unlock the power of data science and machine learning with Python programming language. From data analysis and visualization to building predictive models, this course will teach you everything you need to become a successful data scientist.",
+    "Learn": [
+      "Master Python programming language for data analysis and machine learning.",
+      "Explore data manipulation and visualization with Pandas and Matplotlib libraries.",
+      "Build and evaluate machine learning models using scikit-learn library."
+    ],
+    "Details": [
+      {
+        "Title": "Python Basics",
+        "Description": "This module covers the basics of Python programming language, including variables, data types, control flow, and functions. You'll learn how to write Python scripts and use Python interpreter for interactive programming."
+      },
+      {
+        "Title": "Data Analysis with Pandas",
+        "Description": "Explore data manipulation and analysis with Pandas library. You'll learn how to load and clean data, perform data wrangling operations, and aggregate data for analysis."
+      },
+      {
+        "Title": "Machine Learning Fundamentals",
+        "Description": "Understand the fundamentals of machine learning and supervised learning algorithms. You'll learn how to train and evaluate machine learning models, tune model hyperparameters, and deploy models to production."
+      }
+    ]
   },
   {
     "CourseNumber": 6,
@@ -81,7 +220,32 @@
     "LikesInProcent": 94,
     "LikesInNumbers": "4.2",
     "CourseImageUrl": "course-css-drawing.png",
-    "CategoryId": 2
+    "CategoryId": 2,
+    "Reviews": "1.6",
+    "Articles": 30,
+    "Downloads": 40,
+    "Subscribers": 400,
+    "Followers": 350,
+    "Description": "Unleash your creativity with CSS and create stunning artworks right in your browser. This course will teach you how to use CSS for drawing, animation, and interactive design, allowing you to express your creativity in new and exciting ways.",
+    "Learn": [
+      "Discover the power of CSS for creative designs.",
+      "Learn CSS animations and transitions.",
+      "Create interactive and visually appealing web content."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction to CSS Drawing",
+        "Description": "Get started with CSS drawing and understand its capabilities. You'll learn how to create basic shapes, apply colors and gradients, and use CSS transforms and animations for dynamic effects."
+      },
+      {
+        "Title": "Advanced CSS Techniques",
+        "Description": "Explore advanced CSS properties and techniques for creating intricate designs. You'll learn how to create complex shapes, patterns, and animations using CSS."
+      },
+      {
+        "Title": "Creating CSS Animations",
+        "Description": "Learn how to animate CSS properties and create interactive designs. This module covers keyframe animations, transitions, and CSS animation libraries for creating engaging web content."
+      }
+    ]
   },
   {
     "CourseNumber": 7,
@@ -95,7 +259,32 @@
     "LikesInProcent": 93,
     "LikesInNumbers": "3.2",
     "CourseImageUrl": "course-game-design.png",
-    "CategoryId": 4
+    "CategoryId": 4,
+    "Reviews": "1.7",
+    "Articles": 35,
+    "Downloads": 45,
+    "Subscribers": 450,
+    "Followers": 400,
+    "Description": "Learn how to create 3D characters and assets for video game development using Blender software. Whether you're a beginner or an experienced artist, this course will teach you the essential skills to bring your creative ideas to life.",
+    "Learn": [
+      "Master Blender software for 3D modeling and animation.",
+      "Create characters, objects, and environments for games.",
+      "Understand the game design workflow and best practices."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction to Blender",
+        "Description": "Get started with Blender interface and basic modeling. You'll learn how to navigate the Blender workspace, manipulate objects, and use basic modeling tools."
+      },
+      {
+        "Title": "Character Modeling",
+        "Description": "Learn how to model 3D characters using Blender. This module covers character anatomy, topology, and modeling techniques for creating realistic and stylized characters."
+      },
+      {
+        "Title": "Texturing and Animation",
+        "Description": "Add textures and animate characters using Blender tools. You'll learn how to UV unwrap models, apply textures, rig characters, and create animations using keyframes and animation curves."
+      }
+    ]
   },
   {
     "CourseNumber": 8,
@@ -109,7 +298,32 @@
     "LikesInProcent": 98,
     "LikesInNumbers": "2.7",
     "CourseImageUrl": "course-unity.png",
-    "CategoryId": 4
+    "CategoryId": 4,
+    "Reviews": "1.8",
+    "Articles": 40,
+    "Downloads": 50,
+    "Subscribers": 500,
+    "Followers": 450,
+    "Description": "Create your own 2D mobile games with Unity game engine. Whether you're an aspiring game developer or an experienced programmer, this course will teach you everything you need to build and publish your own mobile games.",
+    "Learn": [
+      "Understand Unity interface and workflow.",
+      "Build 2D game levels and environments.",
+      "Implement game mechanics and user interfaces."
+    ],
+    "Details": [
+      {
+        "Title": "Getting Started with Unity",
+        "Description": "Learn the basics of Unity interface and project setup. You'll learn how to navigate the Unity editor, import assets, and set up scenes for your game projects."
+      },
+      {
+        "Title": "Creating Game Levels",
+        "Description": "Design and build 2D game levels using Unity tools. This module covers tilemaps, sprites, and physics components for creating interactive game environments."
+      },
+      {
+        "Title": "Adding Gameplay Features",
+        "Description": "Implement gameplay mechanics and features using Unity scripting. You'll learn how to write C# scripts to control player movement, handle collisions, and create game logic for your 2D mobile games."
+      }
+    ]
   },
   {
     "CourseNumber": 9,
@@ -123,6 +337,31 @@
     "LikesInProcent": 91,
     "LikesInNumbers": "3.6",
     "CourseImageUrl": "course-testing.png",
-    "CategoryId": 5
+    "CategoryId": 5,
+    "Reviews": "1.9",
+    "Articles": 45,
+    "Downloads": 55,
+    "Subscribers": 550,
+    "Followers": 500,
+    "Description": "Master performance testing with JMETER on real-world applications. This course will teach you how to use JMETER for load testing, stress testing, and performance monitoring of web applications, APIs, and servers.",
+    "Learn": [
+      "Understand the basics of performance testing.",
+      "Learn how to use JMETER for load testing.",
+      "Analyze test results and optimize application performance."
+    ],
+    "Details": [
+      {
+        "Title": "Introduction to JMETER",
+        "Description": "Get started with JMETER and understand its features. You'll learn how to install JMETER, create test plans, and configure test elements for performance testing."
+      },
+      {
+        "Title": "Recording Test Scenarios",
+        "Description": "Learn how to record test scenarios using JMETER proxy. This module covers setting up JMETER proxy server, configuring browser proxy settings, and recording HTTP requests for test scenarios."
+      },
+      {
+        "Title": "Analyzing Test Results",
+        "Description": "Analyze test results and identify performance bottlenecks. You'll learn how to generate performance reports, interpret test metrics, and optimize application performance based on test results."
+      }
+    ]
   }
 ]

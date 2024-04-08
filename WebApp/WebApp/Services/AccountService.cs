@@ -4,10 +4,10 @@ using DataStore.Contexts;
 using Infrastructure.Entities;
 using Infrastructure.Factories;
 using Infrastructure.Models;
+using Infrastructure.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
-using WebApp.Models;
 
 namespace WebApp.Services;
 

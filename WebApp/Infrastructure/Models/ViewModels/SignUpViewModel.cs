@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Infrastructure.Validators;
 
-namespace Infrastructure.Models;
+namespace Infrastructure.Models.ViewModels;
 
 public class SignUpViewModel
 {
@@ -42,6 +43,7 @@ public class SignUpViewModel
 
     [Display(Name = "I agree to the Terms & Conditions.")]
     [Required(ErrorMessage = "You must accept the terms and conditions")]
+    [RequiredCheckbox(ErrorMessage = "You must accept the Terms and Conditions")]
     public bool TermsAndConditions { get; set; }
 
 }

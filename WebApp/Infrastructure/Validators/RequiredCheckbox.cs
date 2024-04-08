@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Validators;
+namespace Infrastructure.Validators;
 
 public class RequiredCheckbox : ValidationAttribute
 {

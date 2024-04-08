@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Infrastructure.Models;
-using WebApp.Models;
+using Infrastructure.Models.ViewModels;
 
 namespace WebApp.Controllers;
 
@@ -20,7 +20,7 @@ public class SecurityController : Controller
     {
         if (ModelState.IsValid)
         {
-            
+
         }
 
         return View(viewModel);

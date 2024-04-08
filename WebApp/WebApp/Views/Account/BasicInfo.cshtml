@@ -1,6 +1,7 @@
 @model AccountDetailsViewModel
 @{
     ViewData["Title"] = "Basic Info";
+    var user = await UserManager.GetUserAsync(User);
 }
 <section class="basic-info settings-wrapper">
     <div class="container-form">
@@ -10,36 +11,36 @@
 
             <div class="input-group-container">
                 <div class="input-group">
-                    <label asp-for="BasicInfo.FirstName"></label>
-                    <input asp-for="BasicInfo.FirstName" />
-                    <span asp-validation-for="BasicInfo.FirstName"></span>
+                    <label asp-for="BasicInfo!.FirstName"></label>
+                    <input asp-for="BasicInfo!.FirstName" />
+                    <span asp-validation-for="BasicInfo!.FirstName"></span>
                 </div>
                 
                 <div class="input-group">
-                    <label asp-for="BasicInfo.LastName"></label>
-                    <input asp-for="BasicInfo.LastName" />
-                    <span asp-validation-for="BasicInfo.LastName"></span>
+                    <label asp-for="BasicInfo!.LastName"></label>
+                    <input asp-for="BasicInfo!.LastName" />
+                    <span asp-validation-for="BasicInfo!.LastName"></span>
                 </div>
             </div>
 
             <div class="input-group-container">
                 <div class="input-group">
-                    <label asp-for="BasicInfo.Email"></label>
-                    <input asp-for="BasicInfo.Email" disabled/>
-                    <span asp-validation-for="BasicInfo.Email"></span>
+                    <label>Email</label>
+                    <input value="@user?.Email" disabled>
+                    @* <span asp-validation-for="BasicInfo.Email"></span> *@
                 </div>
                 
                 <div class="input-group">
-                    <label asp-for="BasicInfo.PhoneNumber"></label>
-                    <input asp-for="BasicInfo.PhoneNumber" />
-                    <span asp-validation-for="BasicInfo.PhoneNumber"></span>
+                    <label asp-for="BasicInfo!.PhoneNumber"></label>
+                    <input asp-for="BasicInfo!.PhoneNumber" />
+                    <span asp-validation-for="BasicInfo!.PhoneNumber"></span>
                 </div>
             </div>
             
             <div class="input-group">
-                <label asp-for="BasicInfo.Biography"></label>
-                <textarea asp-for="BasicInfo.Biography"></textarea>
-                <span asp-validation-for="BasicInfo.Biography"></span>
+                <label asp-for="BasicInfo!.Biography"></label>
+                <textarea asp-for="BasicInfo!.Biography"></textarea>
+                <span asp-validation-for="BasicInfo!.Biography"></span>
             </div>
 
             <div class="btn-container">

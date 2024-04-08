@@ -1,9 +1,9 @@
 ﻿using Infrastructure.Entities;
 using Infrastructure.Factories;
+using Infrastructure.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Models;
 
 namespace WebApp.Controllers;
 
@@ -56,7 +56,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
     [HttpPost]
     [Route("/signup")]
-    public async Task<IActionResult> SignUp(Infrastructure.Models.SignUpViewModel viewModel)
+    public async Task<IActionResult> SignUp(SignUpViewModel viewModel)
     {
         if (ModelState.IsValid)
         {

@@ -11,10 +11,10 @@ public class AddressFactory
         {
             return new AddressEntity
             {
-                AddressLine_1 = model.AddressLine_1,
-                AddressLine_2 = model.AddressLine_2,
-                PostalCode = model.PostalCode,
-                City = model.City
+                AddressLine_1 = model.AddressLine_1!,
+                AddressLine_2 = model.AddressLine_2!,
+                PostalCode = model.PostalCode!,
+                City = model.City!
             };
         }
         catch { }
@@ -26,10 +26,10 @@ public class AddressFactory
     {
         try
         {
-            existingEntity.AddressLine_1 = model.AddressLine_1;
+            existingEntity.AddressLine_1 = model.AddressLine_1!;
             existingEntity.AddressLine_2 = model.AddressLine_2;
-            existingEntity.PostalCode = model.PostalCode;
-            existingEntity.City = model.City;
+            existingEntity.PostalCode = model.PostalCode!;
+            existingEntity.City = model.City!;
 
             return existingEntity;
         }

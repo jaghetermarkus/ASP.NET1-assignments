@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WebApp.Models;
+﻿using Infrastructure.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers;
 

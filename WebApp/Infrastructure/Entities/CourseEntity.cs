@@ -17,7 +17,14 @@ public class CourseEntity
     public decimal? LikesInProcent { get; set; }
     public string? LikesInNumbers { get; set; }
     public string? CourseImageUrl { get; set; }
-
+    public string Reviews { get; set; } = null!;
+    public int Articles { get; set; }
+    public int Downloads { get; set; }
+    public int Subscribers { get; set; }
+    public int Followers { get; set; }
+    public string Description { get; set; } = null!;
+    public List<string> Learn { get; set; } = null!;
+    public List<CourseDetailsEntity> Details { get; set; } = null!;
     public int? CategoryId { get; set; }
     public CategoryEntity? Category { get; set; }
 }

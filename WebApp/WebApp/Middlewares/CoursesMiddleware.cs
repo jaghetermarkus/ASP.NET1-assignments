@@ -47,7 +47,7 @@ public class CoursesMiddleware(RequestDelegate next)
         {
             foreach (var course in courses)
             {
-                var existingCourse = dbContext.Courses.FirstOrDefault(x => x.CourseNumber == course.CourseNumber);
+                var existingCourse = dbContext.Courses.Include(c => c.Details).FirstOrDefault(x => x.CourseNumber == course.CourseNumber);
 
                 if (existingCourse == null)
                 {
@@ -65,6 +65,19 @@ public class CoursesMiddleware(RequestDelegate next)
                     existingCourse.LikesInProcent = course.LikesInProcent;
                     existingCourse.LikesInNumbers = course.LikesInNumbers;
                     existingCourse.CourseImageUrl = course.CourseImageUrl;
+                    existingCourse.Reviews = course.Reviews;
+                    existingCourse.Articles = course.Articles;
+                    existingCourse.Downloads = course.Downloads;
+                    existingCourse.Subscribers = course.Subscribers;
+                    existingCourse.Followers = course.Followers;
+                    existingCourse.Description = course.Description;
+
+                    existingCourse.Learn.Clear();
+                    existingCourse.Learn.AddRange(course.Learn);
+
+                    existingCourse.Details.Clear();
+                    existingCourse.Details.AddRange(course.Details);
+
                     existingCourse.CategoryId = course.CategoryId;
 
                     dbContext.Entry(existingCourse).State = EntityState.Modified;

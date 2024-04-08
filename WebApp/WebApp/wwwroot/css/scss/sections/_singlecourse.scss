@@ -117,35 +117,38 @@
     }
     .container-large {
       .course-description-container {
-        margin: 6rem 0rem;
+        margin: 6rem 0 1rem;
         display: flex;
         gap: 8rem;
-        .description-content {
-          h2 {
-            @include title-h2;
-            margin-bottom: 2rem;
-          }
-          p {
-            line-height: 160%;
-            color: var(--color-gray-700);
-          }
-          h3 {
-            margin: 2.5rem 0 1.5rem;
-            font-size: var(--font-header-h3);
-          }
-          ul {
-            list-style-type: none;
-            margin: 2rem 0 2.5rem;
-            li {
-              display: flex;
-              background-image: url("/images/bx-check-circle.svg");
-              background-repeat: no-repeat;
-              padding-left: 30px;
-              align-items: center;
-              font-size: var(--font-body-m);
-              font-weight: var(--font-weight-regular);
+        .course-content-box {
+          .description-content {
+            h2 {
+              @include title-h2;
+              margin-bottom: 2rem;
+            }
+            p {
+              line-height: 160%;
               color: var(--color-gray-700);
-              margin-bottom: 0.75rem;
+            }
+            h3 {
+              margin: 2.5rem 0 1.5rem;
+              font-size: var(--font-header-h3);
+              color: var(--color-gray-900);
+            }
+            ul {
+              list-style-type: none;
+              margin: 2rem 0 2.5rem;
+              li {
+                display: flex;
+                background-image: url("/images/bx-check-circle.svg");
+                background-repeat: no-repeat;
+                padding-left: 30px;
+                align-items: center;
+                font-size: var(--font-body-m);
+                font-weight: var(--font-weight-regular);
+                color: var(--color-gray-700);
+                margin-bottom: 0.75rem;
+              }
             }
           }
         }
@@ -191,6 +194,46 @@
             @include glow;
             &:hover {
               @include button-standard-hover;
+            }
+          }
+        }
+      }
+      .course-details {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        max-width: 750px;
+        h2 {
+          @include title-h2;
+          color: var(--color-gray-900);
+        }
+        .detail-box {
+          display: flex;
+          gap: 2rem;
+          .detail-count {
+            font-size: var(--font-body-lead);
+            font-weight: var(--font-weight-extrabold);
+            color: var(--color-gray-900);
+            padding: 1rem;
+            border-radius: 50%;
+            background-color: var(--color-input);
+            border: 0.75rem solid var(--color-gray-200);
+            width: 5rem;
+            height: 5rem;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .detail-content {
+            h4 {
+              margin-bottom: 1.5rem;
+              font-size: var(--font-header-h4);
+              color: var(--color-gray-900);
+            }
+            .detail-description {
+              line-height: 160%;
+              color: var(--color-gray-700);
             }
           }
         }

@@ -1,5 +1,6 @@
 ﻿using Infrastructure.Entities;
 using Infrastructure.Models;
+using Infrastructure.Models.ViewModels;
 
 namespace Infrastructure.Factories;
 

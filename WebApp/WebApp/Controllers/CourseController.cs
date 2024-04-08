@@ -38,7 +38,7 @@ public class CourseController(CourseService courseService, DataContext context) 
 
         if (!String.IsNullOrEmpty(category) && category.ToLower() != "all")
         {
-            coursesQuery = coursesQuery.Where(c => c.Category.CategoryName.ToLower() == category.ToLower());
+            coursesQuery = coursesQuery.Where(c => c.Category!.CategoryName.Equals(category, StringComparison.CurrentCultureIgnoreCase));
         }
 
         int pageSize = 6;

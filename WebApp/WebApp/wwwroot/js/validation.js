@@ -1,19 +1,21 @@
 let forms = document.querySelectorAll("form");
-let inputs = forms[0].querySelectorAll("input");
 
-inputs.forEach((input) => {
-  input.addEventListener("keyup", (e) => {
-    switch (e.target.type) {
-      case "text":
-        textValidation(e, e.target.dataset.valMinlengthMin);
-        break;
-      case "email":
-        emailValidation(e);
-        break;
-      case "password":
-        passwordValidation(e);
-        break;
-    }
+forms.forEach((form) => {
+  let inputs = form.querySelectorAll("input");
+  inputs.forEach((input) => {
+    input.addEventListener("keyup", (e) => {
+      switch (e.target.type) {
+        case "text":
+          textValidation(e, e.target.dataset.valMinlengthMin);
+          break;
+        case "email":
+          emailValidation(e);
+          break;
+        case "password":
+          passwordValidation(e);
+          break;
+      }
+    });
   });
 });
 
