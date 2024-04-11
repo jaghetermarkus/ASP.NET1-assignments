@@ -8,6 +8,7 @@ using WebApp.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
 builder.Services.AddScoped<CourseService>();
 builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<PasswordHasher<UserEntity>>();
@@ -25,7 +26,7 @@ builder.Services.AddSession();
 var app = builder.Build();
 app.UseExceptionHandler("/Error");
 app.UseHsts();
-app.UseMiddleware<CoursesMiddleware>();
+// app.UseMiddleware<CoursesMiddleware>();
 // app.UseStatusCodePagesWithRedirects("/Default/Error/{0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();

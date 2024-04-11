@@ -1,6 +1,6 @@
-@model NewsletterViewModel
+@model SubscriberFormModel
 
-<section class="newsletter">
+<section id="newsletter" class="newsletter">
     <div class="container-small">
 
         <div class="newsletter-title-container">
@@ -8,7 +8,7 @@
             <img src="images/twisted-arrow.svg" alt="">
         </div>
 
-        <form method="post">
+        <form class="newsletter-form" method="post" asp-action="Subscribe" asp-controller="Newsletter">
             <div class="newsletter-checkbox-container">
                 <h4 class="checkbox-title">Sign up for Newsletters</h4>
                 <div class="checkbox-div" >
@@ -57,6 +57,11 @@
 
                 </div>
             </div>
+            
+            <p class="tempdata-status">
+                @TempData["Status"]
+            </p>
+
             <div class="newsletter-input-container">
                 <input type="text" class="newsletter-input" placeholder="Your Email">
                 <button class="newsletter-btn">Subscribe *</button>
