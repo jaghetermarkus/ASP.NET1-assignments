@@ -1,10 +1,17 @@
-﻿using Infrastructure.Models.ViewModels;
+﻿using System.Text;
+using Infrastructure.Entities;
+using Infrastructure.Models;
+using Infrastructure.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Newtonsoft.Json;
 
 namespace WebApp.Controllers;
 
-public class DefaultController : Controller
+public class DefaultController(HttpClient http) : Controller
 {
+    private readonly HttpClient _http = http;
+
     [Route("/")]
     public IActionResult Index()
     {
@@ -30,18 +37,57 @@ public class DefaultController : Controller
     #region Contact
     [Route("/contact")]
     [HttpGet]
-    public IActionResult Contact()
+    public async Task<IActionResult> Contact()
     {
-        return View();
+        try
+        {
+            var response = await _http.GetAsync("http://localhost:5094/api/Services");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var servicesJson = await response.Content.ReadAsStringAsync();
+                var services = JsonConvert.DeserializeObject<List<ServiceModel>>(servicesJson);
+
+                var model = new ContactUsViewModel
+                {
+                    Services = services
+                };
+
+                return View(model);
+            }
+        }
+        catch { }
+        return View(new ContactUsViewModel());
     }
 
     [Route("/contact")]
     [HttpPost]
-    public IActionResult Contact(ContactUsViewModel viewModel)
+    public async Task<IActionResult> Contact(ContactUsViewModel viewModel)
     {
         if (ModelState.IsValid)
         {
+            var formModel = new ContactFormModel
+            {
+                Email = viewModel.Email,
+                FullName = viewModel.FullName,
+                ServiceId = viewModel.ServiceId,
+                Message = viewModel.Message,
+            };
 
+            var content = new StringContent(JsonConvert.SerializeObject(formModel), Encoding.UTF8, "application/json");
+            //HTTP
+            var createResponse = await _http.PostAsync("http://localhost:5094/api/Contacts", content);
+
+            if (createResponse.IsSuccessStatusCode)
+            {
+                TempData["Status"] = "Thanks for your message, we'll get back to you as soon as possible!";
+                return RedirectToAction("Contact", viewModel);
+            }
+            else
+            {
+                TempData["Status"] = "Something went wrong :/ please try again!";
+                return View();
+            }
         }
 
         return View(viewModel);

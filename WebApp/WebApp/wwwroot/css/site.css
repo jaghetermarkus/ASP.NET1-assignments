@@ -515,7 +515,8 @@ form input[type=checkbox]::before {
 form input[type=checkbox]:checked::before {
   border-color: var(--color-white);
 }
-form .select {
+form .select,
+form .select-service {
   position: relative;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>');
   background-repeat: no-repeat;
@@ -533,10 +534,12 @@ form .select {
   font-size: var(--font-body-s);
   font-weight: var(--font-weight-regular);
 }
-form .select .selected {
+form .select .selected,
+form .select-service .selected {
   cursor: pointer;
 }
-form .select .select-options {
+form .select .select-options,
+form .select-service .select-options {
   display: none;
   position: absolute;
   top: 100%;
@@ -550,11 +553,13 @@ form .select .select-options {
   color: var(--color-gray-700);
   z-index: 20;
 }
-form .select .select-options .option {
+form .select .select-options .option,
+form .select-service .select-options .option {
   padding: 0.8rem 2rem 0.8rem 1rem;
   cursor: pointer;
 }
-form .select .select-options .option:hover {
+form .select .select-options .option:hover,
+form .select-service .select-options .option:hover {
   background-color: var(--color-gray-300);
 }
 form .btn-container {

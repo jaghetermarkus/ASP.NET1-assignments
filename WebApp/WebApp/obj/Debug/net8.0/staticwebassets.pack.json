@@ -397,6 +397,10 @@
       "PackagePath": "staticwebassets/images/zoom-icon.svg"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/contact.js",
+      "PackagePath": "staticwebassets/js/contact.js"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/courses.js",
       "PackagePath": "staticwebassets/js/courses.js"
     },

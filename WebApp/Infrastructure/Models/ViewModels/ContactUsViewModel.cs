@@ -20,12 +20,12 @@ public class ContactUsViewModel
 
 
     [Display(Name = "Service", Prompt = "Choose the service you are interested in")]
-    [DataType(DataType.Text)]
-    public string? Service { get; set; }
-
+    public int ServiceId { get; set; }
 
     [Display(Name = "Message", Prompt = "Enter your message here...")]
     [StringLength(200, ErrorMessage = "Message cannot exceed 200 characters")]
     [DataType(DataType.Text)]
     public string Message { get; set; } = null!;
+
+    public List<ServiceModel>? Services { get; set; }
 }

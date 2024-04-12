@@ -1,4 +1,5 @@
 @model ContactUsViewModel
+
 @{
     ViewData["Title"] = "Contact";
 }
@@ -47,6 +48,9 @@
             </div>
 
             <div class="contact-form-container">
+                <p class="tempdata-status">
+                @TempData["Status"]
+            </p>
                 <form method="post" asp-controller="Default" asp-action="Contact" >
                     <h3 class="contact-form-title">Get In Contact With Us</h3>
                     <div class="input-group">
@@ -60,16 +64,33 @@
                         <span asp-validation-for="Email"></span>
                     </div>
                     <div class="input-group">
+                        <label>Service <span class="optional">(optional)</span> </label>
+                        <div class="select-service">
+                            <div class="selected">Choose the service you are interested in</div>
+                            <div class="select-options">
+                                <div class="option" data-value="null">Choose the service you are interested in</div> 
+                                    @if (Model.Services != null)
+                                    {
+                                        @foreach (var Service in Model.Services)
+                                        {
+                                            <div class="option" data-value="@Service.Id">@Service.ServiceName</div>
+                                        }
+                                    }
+                            </div>
+                        </div>
+                    </div>
+                    <input asp-for="ServiceId" type="hidden" id="selectedService" >
+                    @* <div class="input-group">
                         <label asp-for="Service"></label>
                         <select asp-for="Service"></select>
                         <span asp-validation-for="Service"></span>
-                    </div>
+                    </div> *@
                     <div class="input-group">
                         <label asp-for="Message"></label>
                         <textarea asp-for="Message"></textarea>
                         <span asp-validation-for="Message"></span>
                     </div>
-                    <button class="btn-theme contact-us-btn">Send Contact Request</button>
+                    <button type="submit" class="btn-theme contact-us-btn">Send Contact Request</button>
                 </form>
             </div>
         </div>

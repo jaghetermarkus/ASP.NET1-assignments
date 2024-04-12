@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aceACHkSH/AW6j+Fy2djD+tMNdB+q74zAiNqib+1aXo=",
+  "Hash": "o/K+5aEtQ3JjB1z/LezXU/QjLwuvzmN9yqkFVwe2rdU=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -3036,6 +3036,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/zoom-icon.svg"
+    },
+    {
+      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/contact.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "js/contact.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/contact.js"
     },
     {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/js/courses.js",

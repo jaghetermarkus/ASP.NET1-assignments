@@ -151,7 +151,8 @@ form {
     @include checkbox;
   }
 
-  .select {
+  .select,
+  .select-service {
     position: relative;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>');
     background-repeat: no-repeat;
