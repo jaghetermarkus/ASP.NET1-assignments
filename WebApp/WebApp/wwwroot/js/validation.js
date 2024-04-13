@@ -69,8 +69,16 @@ const passwordValidation = (e) => {
 
   if (e.target.dataset.valEqualtoOther && e.target.value.length > 0) {
     console.log("passwordValidation if true");
+    console.log(e);
     let compareFieldName = e.target.dataset.valEqualtoOther.split(".")[1];
-    let compareField = document.querySelector(`[name='${compareFieldName}']`);
+    // let compareField = document.querySelector(`[name='${compareFieldName}']`);
+    if (document.querySelector(`[name='Password.${compareFieldName}']`)) {
+      var compareField = document.querySelector(
+        `[name='Password.${compareFieldName}']`
+      );
+    } else {
+      var compareField = document.querySelector(`[name='${compareFieldName}']`);
+    }
     console.log(compareFieldName);
     console.log(e.target.value);
     if (compareField.value == e.target.value)

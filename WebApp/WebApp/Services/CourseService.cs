@@ -22,7 +22,7 @@ public class CourseService(DataContext context)
     {
         try
         {
-            var entity = await _context.Courses.FirstOrDefaultAsync(x => x.Id == id);
+            var entity = await _context.Courses.Include(c => c.Details).FirstOrDefaultAsync(x => x.Id == id);
             if (entity != null)
             {
                 return entity;
