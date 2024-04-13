@@ -121,17 +121,24 @@ function updateCoursesByFilter() {
       const parser = new DOMParser();
       const dom = parser.parseFromString(data, "text/html");
 
+      // const coursesWrapper = dom.querySelector(".courses-wrapper");
+      // if (coursesWrapper) {
+      //   document.querySelector(".courses-wrapper").innerHTML =
+      //     coursesWrapper.innerHTML;
+      // } else {
+      //   console.error(
+      //     "No element with class 'courses-wrapper' found in the fetched HTML."
+      //   );
+      // }
+
+      // document.querySelector(".courses-wrapper").innerHTML =
+      //   dom.querySelector(".courses-wrapper").innerHTML;
+
       const coursesWrapper = dom.querySelector(".courses-wrapper");
       if (coursesWrapper) {
         document.querySelector(".courses-wrapper").innerHTML =
           coursesWrapper.innerHTML;
-      } else {
-        console.error(
-          "No element with class 'courses-wrapper' found in the fetched HTML."
-        );
       }
-      // document.querySelector(".courses-wrapper").innerHTML =
-      //   dom.querySelector(".courses-wrapper").innerHTML;
 
       const pagination = dom.querySelector(".pagination")
         ? dom.querySelector(".pagination").innerHTML
