@@ -75,8 +75,12 @@ public class CoursesMiddleware(RequestDelegate next)
                     existingCourse.Learn.Clear();
                     existingCourse.Learn.AddRange(course.Learn);
 
-                    existingCourse.Details.Clear();
-                    existingCourse.Details.AddRange(course.Details);
+                    // existingCourse.Details.Clear();
+
+                    // foreach (var detail in course.Details)
+                    // {
+                    //     existingCourse.Details.Add(detail);
+                    // }
 
                     existingCourse.CategoryId = course.CategoryId;
 

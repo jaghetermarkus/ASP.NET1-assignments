@@ -430,6 +430,10 @@ form .input-group {
   position: relative;
   display: grid;
 }
+form .input-group .optional {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-gray-500);
+}
 form .checkbox-group label {
   font-weight: var(--font-weight-regular);
   font-size: var(--font-body-m);
@@ -561,6 +565,11 @@ form .select-service .select-options .option {
 form .select .select-options .option:hover,
 form .select-service .select-options .option:hover {
   background-color: var(--color-gray-300);
+}
+form .select-service {
+  max-width: 100%;
+  max-height: 100%;
+  line-height: 160%;
 }
 form .btn-container {
   display: flex;
@@ -1034,6 +1043,17 @@ footer .container-small .copyright {
 }
 .contact-us-page .container .contact-us-main .contact-form-container textarea {
   height: 12.5rem;
+}
+.contact-us-page .container .contact-us-main .contact-form-container .contact-tempdata-status {
+  border-radius: 0.25rem;
+  display: inline-block;
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  color: var(--color-success);
+  font-weight: var(--font-weight-regular);
+  background-color: rgba(34, 197, 94, 0.12);
 }
 .contact-us-page .container .contact-us-main .contact-form-container .contact-us-btn {
   width: -moz-fit-content;

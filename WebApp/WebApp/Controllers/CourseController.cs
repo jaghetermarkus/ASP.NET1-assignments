@@ -15,7 +15,6 @@ public class CourseController(CourseService courseService, DataContext context) 
     private readonly DataContext _context = context;
 
     [Route("/course/courses/{page?}")]
-
     public async Task<IActionResult> Courses(string sortOrder, string searchString, string currentFilter, string category, int? page)
     {
         ViewBag.CurrentSort = sortOrder;

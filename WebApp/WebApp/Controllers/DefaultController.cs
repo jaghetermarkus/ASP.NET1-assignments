@@ -52,7 +52,7 @@ public class DefaultController(HttpClient http) : Controller
                 {
                     Services = services
                 };
-
+                TempData["Status"] = "Thanks for your message, we'll get back to you as soon as possible!";
                 return View(model);
             }
         }

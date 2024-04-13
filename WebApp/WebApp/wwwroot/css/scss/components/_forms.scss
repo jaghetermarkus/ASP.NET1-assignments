@@ -115,6 +115,10 @@ form {
   .input-group {
     position: relative;
     display: grid;
+    .optional {
+      font-weight: var(--font-weight-regular);
+      color: var(--color-gray-500);
+    }
   }
 
   .checkbox-group {
@@ -198,6 +202,11 @@ form {
         }
       }
     }
+  }
+  .select-service {
+    max-width: 100%;
+    max-height: 100%;
+    line-height: 160%;
   }
 
   .btn-container {
