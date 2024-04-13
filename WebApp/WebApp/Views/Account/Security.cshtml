@@ -1,7 +1,12 @@
+@model AccountSecurityViewModel
+
 <div class="account-container">
     <partial name="~/Views/Shared/Sections/_ProfileMenu.cshtml" />
+    @* @await Html.PartialAsync("~/Views/Shared/Sections/_ProfileMenu.cshtml")  *@
 <div class="settings-container">
-    <partial name="~/Views/Account/Password.cshtml" />
-    <partial name="~/Views/Account/DeleteAccount.cshtml" />
+    @* <partial name="~/Views/Account/Password.cshtml" /> *@
+    @await Html.PartialAsync("~/Views/Account/Password.cshtml", Model) 
+    @await Html.PartialAsync("~/Views/Account/DeleteAccount.cshtml", Model) 
+    @* <partial name="~/Views/Account/DeleteAccount.cshtml" /> *@
 </div>
 </div>

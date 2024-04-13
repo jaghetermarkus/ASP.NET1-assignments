@@ -68,15 +68,18 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
         {
             if (viewModel.AddressInfo != null)
             {
-                if (!string.IsNullOrEmpty(viewModel.AddressInfo.AddressLine_1) && !string.IsNullOrEmpty(viewModel.AddressInfo.PostalCode) && !string.IsNullOrEmpty(viewModel.AddressInfo.City))
+                if (TryValidateModel(viewModel.AddressInfo))
                 {
-                    var updateResult = await _accountService.UpdateAddressAsync(User, viewModel.AddressInfo);
+                    if (!string.IsNullOrEmpty(viewModel.AddressInfo.AddressLine_1) && !string.IsNullOrEmpty(viewModel.AddressInfo.PostalCode) && !string.IsNullOrEmpty(viewModel.AddressInfo.City))
+                    {
+                        var updateResult = await _accountService.UpdateAddressAsync(User, viewModel.AddressInfo);
+                    }
                 }
             }
         }
         catch { }
 
-        return RedirectToAction("Details", "Account");
+        return View("Details", viewModel);
     }
     #endregion
 
@@ -133,24 +136,29 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
 
     [HttpPost]
     [Route("/account/password")]
-    public async Task<IActionResult> Password(PasswordViewModel viewModel)
+    public async Task<IActionResult> Password(AccountSecurityViewModel viewModel)
     {
         try
         {
-            if (ModelState.IsValid)
+            if (viewModel.Password != null)
             {
-                var updateResult = await _accountService.UpdatePasswordAsync(User, viewModel);
-                if (updateResult)
+                if (TryValidateModel(viewModel.Password))
                 {
-                    // TempData["SuccessMessage"] = "Password is successfully updated.";
-                    return RedirectToAction("Details", "Account");
+                    var updateResult = await _accountService.UpdatePasswordAsync(User, viewModel.Password!);
+                    if (updateResult)
+                    {
+                        // TempData["SuccessMessage"] = "Password is successfully updated.";
+                        // return RedirectToAction("Details", "Account");
+                        return View("Security", viewModel);
+                    }
                 }
             }
         }
         catch { }
 
         // TempData["ErrorMessage"] = "Something went wrong, password isn´t updated.";
-        return RedirectToAction("Security", "Account");
+        // return RedirectToAction("Security", "Account");
+        return View("Security", viewModel);
     }
     #endregion
 

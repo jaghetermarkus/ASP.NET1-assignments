@@ -40,8 +40,8 @@ public class NewsletterController(HttpClient http) : Controller
                 }
             }
             catch (Exception ex) { Debug.WriteLine(ex.Message); }
+            TempData["Status"] = "Opps.. something went wrong :(";
         }
-        TempData["Status"] = "Opps.. something went wrong :(";
         return RedirectToAction("Index", "Default", "newsletter");
     }
 }

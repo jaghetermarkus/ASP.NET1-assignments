@@ -66,9 +66,10 @@
             </p>
 
             <div class="newsletter-input-container">
-                <input type="text" class="newsletter-input" asp-for="Email" placeholder="Your Email">
+                <input class="newsletter-input" asp-for="Email" placeholder="Your Email">
                 <button class="newsletter-btn" type="submit">Subscribe *</button>
             </div>
+            <span asp-validation-for="Email"></span>
             <p class="newsletter-privacy"><span>* Yes, I agree to the <a href="" class="privacy-link">terms</a> and <a href="" class="privacy-link">privacy policy</a>.</span></p>
         </form>
 

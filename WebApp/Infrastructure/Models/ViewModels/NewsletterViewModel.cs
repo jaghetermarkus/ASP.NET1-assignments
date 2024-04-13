@@ -4,8 +4,10 @@ namespace Infrastructure.Models.ViewModels;
 
 public class NewsletterViewModel
 {
-    [Required]
     [EmailAddress]
+    [Required(ErrorMessage = "An valid email is required")]
+    [DataType(DataType.EmailAddress)]
+    [RegularExpression("^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$", ErrorMessage = "Invalid email address")]
     public string Email { get; set; } = null!;
 
     [Display(Name = "Daily Newsletter")]

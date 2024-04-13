@@ -26,7 +26,7 @@ builder.Services.AddSession();
 var app = builder.Build();
 app.UseExceptionHandler("/Error");
 app.UseHsts();
-app.UseMiddleware<CoursesMiddleware>();
+// app.UseMiddleware<CoursesMiddleware>();
 // app.UseStatusCodePagesWithRedirects("/Default/Error/{0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
