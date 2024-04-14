@@ -1,28 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   selectService();
-  // updateCourseFilter();
-  // updateCoursesByFilter();
-
-  // let selectedCategory = "@ViewBag.CurrentCategory";
-
-  // if (selectedCategory) {
-  //   let selectedOption = document.querySelector(
-  //     `.option[data-value="${selectedCategory}"]`
-  //   );
-  //   if (selectedOption) {
-  //     let select = document.querySelector(".select");
-  //     let selected = select.querySelector(".selected");
-  //     selected.textContent = selectedCategory;
-  //   }
-  // }
-  // updateCourses();
-
-  // const searchInput = document.getElementById("searchString");
-  // searchInput.addEventListener("input", function () {
-  //   const selectedCategory = document.querySelector(".selected").textContent;
-  //   const searchString = this.value;
-  //   updateCourses(selectedCategory, searchString);
-  // });
 });
 
 function selectService() {
@@ -46,21 +23,6 @@ function selectService() {
         let hiddenInput = document.getElementById("selectedService");
         hiddenInput.value = selectedService;
         console.log(hiddenInput.value);
-        // selected.setAttribute("data-value", service);
-        // document
-        //   .querySelector("#selectedService")
-        //   .setAttribute("value", service);
-        // console.log(
-        //   document.querySelector("#selectedService").getAttribute("value")
-        // );
-
-        //   .setAttribute("data-value", service);
-
-        // console.log(category);
-        // const selectedCategory = event.target.getAttribute("data-value");
-        // const searchString = document.getElementById("searchString").value;
-        // updateCourses(selectedCategory, searchString);
-        // updateCoursesByFilter(category);
       });
     });
   } catch {}

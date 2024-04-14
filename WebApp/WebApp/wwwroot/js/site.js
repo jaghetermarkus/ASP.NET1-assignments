@@ -15,7 +15,6 @@
     mobileMenu.classList.remove("active");
     mobileMenu.classList.remove("fixed");
 
-    // nav.classList.remove("active");
     header.classList.remove("active");
   });
 

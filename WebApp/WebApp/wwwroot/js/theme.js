@@ -9,12 +9,6 @@ function toggleTheme() {
       if (res.ok) window.location.reload();
       else console.log("failed to switch theme mode");
     });
-
-    // const body = document.body;
-    // body.classList.toggle("dark-mode");
-
-    // let theme = body.classList.contains("dark-mode") ? "dark" : "light";
-    // localStorage.setItem("theme", theme);
   } catch {}
 }
 
@@ -28,4 +22,3 @@ function setSavedTheme() {
 }
 
 document.querySelector("#switch-mode").addEventListener("click", toggleTheme);
-// document.addEventListener("DOMContentLoaded", setSavedTheme);
