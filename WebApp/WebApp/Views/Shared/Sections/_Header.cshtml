@@ -11,14 +11,14 @@
         <a class="logo" asp-action="Index" asp-controller="Default"><img src="~/images/logo-solid-@(theme).svg" alt=""></a>
 
         <nav>
-            <a class="menu-link " asp-action="Index" asp-controller="Default" >Overview</a>
+            <a class="menu-link " asp-action="Index" asp-controller="Default" asp-fragment="hero" >Overview</a>
             @if (SignInManager.IsSignedIn(User))
             {
                 <a class="menu-link courses" asp-action="Courses" asp-controller="Course" >Courses</a>
             }
             else
             {
-                <a class="menu-link" asp-action="Index" asp-controller="Default" >Features</a>
+                <a class="menu-link" asp-action="Index" asp-controller="Default" asp-fragment="features" >Features</a>
             }
             <a class="menu-link contact" asp-action="Contact" asp-controller="Default" >Contact</a>
         </nav>

@@ -17,13 +17,6 @@ public class BasicInfoViewModel
     [DataType(DataType.Text)]
     public string LastName { get; set; } = null!;
 
-    // [EmailAddress]
-    // [Display(Name = "Email address", Prompt = "Enter your email address")]
-    // [Required(ErrorMessage = "An valid email is required")]
-    // [DataType(DataType.EmailAddress)]
-    // [RegularExpression("^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$", ErrorMessage = "Invalid email address")]
-    // public string Email { get; set; } = null!;
-
     [Display(Name = "Phone", Prompt = "Enter your phone")]
     [MinLength(10, ErrorMessage = "A valid phone number is required")]
     [DataType(DataType.Text)]
