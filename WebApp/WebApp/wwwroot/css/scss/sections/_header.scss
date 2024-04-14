@@ -208,7 +208,7 @@ header {
   }
 
   &.active {
-    background-color: var(--color-gray-900);
+    background-color: var(--color-gray-300);
     height: 100%;
     position: fixed;
     z-index: 20;
@@ -234,6 +234,7 @@ header {
       }
 
       .burger-menu {
+        color: var(--color-gray-800);
         // grid-area: mobile;
         display: initial;
         align-self: flex-end;
@@ -241,6 +242,11 @@ header {
         // position: absolute;
         // top: 16px;
         // right: 13px;
+      }
+      .btn-switch {
+        grid-area: switch;
+        display: flex;
+        margin-right: 2rem;
       }
 
       nav {
@@ -254,8 +260,9 @@ header {
         gap: 3rem;
         margin: 5rem 0;
         .menu-link {
+          @include navigation;
           display: block;
-          color: var(--color-white);
+          color: var(--color-gray-800);
           font-size: var(--font-header-h2);
         }
       }

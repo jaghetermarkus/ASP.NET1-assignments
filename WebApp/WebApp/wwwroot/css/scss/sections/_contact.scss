@@ -71,7 +71,7 @@
         z-index: 10;
         flex: 2;
         max-width: 636px;
-        background-color: var(--color-white);
+        background-color: var(--color-gray-000);
         border-radius: 0.5rem;
         box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06),
           0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
@@ -88,9 +88,9 @@
           padding: 0 0.5rem;
           margin-top: 0.25rem;
           max-width: fit-content;
-          color: var(--color-success);
+          // color: var(--color-success);
           font-weight: var(--font-weight-regular);
-          background-color: rgba(34, 197, 94, 0.12);
+          // background-color: rgba(34, 197, 94, 0.12);
         }
         .contact-us-btn {
           width: fit-content;

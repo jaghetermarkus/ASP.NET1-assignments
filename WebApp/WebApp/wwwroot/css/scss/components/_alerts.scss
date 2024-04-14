@@ -27,3 +27,12 @@
   font-weight: var(--font-weight-regular);
   background-color: rgba(239, 68, 68, 0.12);
 }
+
+.tempdata-status {
+  border-radius: 0.25rem;
+  display: inline-block;
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+  max-width: fit-content;
+  font-weight: var(--font-weight-regular);
+}

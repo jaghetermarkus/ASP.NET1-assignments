@@ -40,14 +40,17 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                 if (!string.IsNullOrEmpty(viewModel.BasicInfo!.FirstName) && !string.IsNullOrEmpty(viewModel.BasicInfo.LastName))
                 {
                     var updateResult = await _accountService.UpdateBasicInfoAsync(User, viewModel.BasicInfo);
+                    TempData["StatusSuccess"] = "Your information is updated!";
+                    return RedirectToAction("Details", "Account");
                 }
             }
+            return View("Details", viewModel);
         }
         catch (Exception ex)
         {
             Debug.WriteLine(ex.Message);
         }
-
+        TempData["StatusError"] = "Opps.. something went wrong :(";
         return View("Details", viewModel);
     }
     #endregion
@@ -73,12 +76,16 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                     if (!string.IsNullOrEmpty(viewModel.AddressInfo.AddressLine_1) && !string.IsNullOrEmpty(viewModel.AddressInfo.PostalCode) && !string.IsNullOrEmpty(viewModel.AddressInfo.City))
                     {
                         var updateResult = await _accountService.UpdateAddressAsync(User, viewModel.AddressInfo);
+                        TempData["AddressStatusSuccess"] = "Your address is updated!";
+                        return RedirectToAction("Details", "Account");
                     }
                 }
             }
+            return View("Details", viewModel);
         }
         catch { }
 
+        TempData["AddressStatusError"] = "Opps.. something went wrong :(";
         return View("Details", viewModel);
     }
     #endregion
@@ -147,16 +154,17 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                     var updateResult = await _accountService.UpdatePasswordAsync(User, viewModel.Password!);
                     if (updateResult)
                     {
-                        // TempData["SuccessMessage"] = "Password is successfully updated.";
+                        TempData["StatusSuccess"] = "Password is successfully updated.";
                         // return RedirectToAction("Details", "Account");
                         return View("Security", viewModel);
                     }
                 }
             }
+            return View("Security", viewModel);
         }
         catch { }
 
-        // TempData["ErrorMessage"] = "Something went wrong, password isn´t updated.";
+        TempData["StatusError"] = "Something went wrong, password isn´t updated.";
         // return RedirectToAction("Security", "Account");
         return View("Security", viewModel);
     }
@@ -190,9 +198,12 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                     return RedirectToAction("Security", "Account");
                 }
             }
+            TempData["StatusError"] = "You must confirm to delete your account";
+            return RedirectToAction("Security", "Account");
         }
         catch { }
 
+        TempData["StatusError"] = "Something went wrong, please try again.";
         return RedirectToAction("Security", "Account");
 
     }

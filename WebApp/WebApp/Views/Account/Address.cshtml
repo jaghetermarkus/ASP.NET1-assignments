@@ -6,6 +6,15 @@
     <div class="container-form">
         <form method="post" asp-controller="Account" asp-action="Address">
             <h5 class="form-sub-title">Address</h5>
+
+            @if (@TempData["AddressStatusSuccess"] != null)
+                {
+                    <p class="tempdata-status alert-success">@TempData["AddressStatusSuccess"]</p>
+                }
+                @if (@TempData["AddressStatusError"] != null)
+                {
+                    <p class="tempdata-status alert-error">@TempData["AddressStatusError"]</p>
+                }
             
             <div class="input-group">
                 <label asp-for="AddressInfo!.AddressLine_1"></label>

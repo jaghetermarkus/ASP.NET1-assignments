@@ -1136,6 +1136,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\icon-cross.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\icon-green-check.svg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebApp</BasePath>
+      <RelativePath>images/icon-green-check.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\icon-green-check.svg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\logo-solid-dark.svg))">
       <SourceType>Package</SourceType>
       <SourceId>WebApp</SourceId>
@@ -1551,6 +1567,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_48844da6-a934-42fb-a4be-d84c9a726901_a0463eec-d4aa-48f4-ae5a-2ceb8f9cfa08.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_353239ab-5abc-4501-be38-e0997eaddc17.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebApp</BasePath>
+      <RelativePath>images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_353239ab-5abc-4501-be38-e0997eaddc17.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_353239ab-5abc-4501-be38-e0997eaddc17.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_6d1a339b-fe9f-43ef-aa0a-8bd5a9369127.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebApp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebApp</BasePath>
+      <RelativePath>images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_6d1a339b-fe9f-43ef-aa0a-8bd5a9369127.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_6d1a339b-fe9f-43ef-aa0a-8bd5a9369127.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\uploads\pImg_7437899c-14ad-4be0-9783-81798938eb23_b667d090-eee2-408d-876d-7a9b3ba3dd41.jpg))">
       <SourceType>Package</SourceType>

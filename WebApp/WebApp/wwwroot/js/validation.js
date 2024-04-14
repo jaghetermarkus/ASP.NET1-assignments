@@ -25,13 +25,15 @@ const handleValidationOutput = (isValid, e, text = "") => {
   if (isValid) {
     console.log("handleValidation isValid");
     e.target.classList.remove("input-validation-error");
+    e.target.classList.add("input-validation-valid");
     span.classList.remove("field-validation-error");
     span.classList.add("field-validation-valid");
     // span.classList.add("validation-isValid");
-    span.innerHTML = "";
+    span.innerHTML = "Looks good!";
   } else {
     console.log("handleValidation notValid");
     e.target.classList.add("input-validation-error");
+    e.target.classList.remove("input-validation-valid");
     span.classList.add("field-validation-error");
     span.classList.remove("field-validation-valid");
     // span.classList.remove("validation-isValid");
@@ -65,13 +67,13 @@ const emailValidation = (e) => {
 
 const passwordValidation = (e) => {
   const regEx = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])(?!.*\s).{8,}$/;
-  console.log("passwordValidation");
 
   if (e.target.dataset.valEqualtoOther && e.target.value.length > 0) {
-    console.log("passwordValidation if true");
-    console.log(e);
     let compareFieldName = e.target.dataset.valEqualtoOther.split(".")[1];
-    // let compareField = document.querySelector(`[name='${compareFieldName}']`);
+
+    // let compareField = document.querySelector(`[name='${compareFieldName}']`); --- Only works in one form.
+
+    // Needs inprovment --->
     if (document.querySelector(`[name='Password.${compareFieldName}']`)) {
       var compareField = document.querySelector(
         `[name='Password.${compareFieldName}']`
@@ -79,23 +81,19 @@ const passwordValidation = (e) => {
     } else {
       var compareField = document.querySelector(`[name='${compareFieldName}']`);
     }
-    console.log(compareFieldName);
-    console.log(e.target.value);
+    // <---- Needs inprovment
+
     if (compareField.value == e.target.value)
       handleValidationOutput(true, e, e.target.dataset.valEqualto);
     else handleValidationOutput(false, e, e.target.dataset.valEqualto);
   } else {
-    console.log("passwordValidation if else");
     if (e.target.value.length > 0)
       handleValidationOutput(
         regEx.test(e.target.value),
         e,
         e.target.dataset.valRegex
       );
-    else {
-      console.log("passwordValidation if else else");
-      handleValidationOutput(false, e, e.target.dataset.valRequired);
-    }
+    else handleValidationOutput(false, e, e.target.dataset.valRequired);
 
     //   let compareTo = document.querySelector(e.target.dataset.valEqualtoOther);
     //   console.log(e.target.dataset.valEqualtoOther);

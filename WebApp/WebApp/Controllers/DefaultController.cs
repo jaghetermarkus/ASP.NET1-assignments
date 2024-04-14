@@ -52,7 +52,7 @@ public class DefaultController(HttpClient http) : Controller
                 {
                     Services = services
                 };
-                TempData["Status"] = "Thanks for your message, we'll get back to you as soon as possible!";
+                TempData["StatusSuccess"] = "Thanks for your message, we'll get back to you as soon as possible!";
                 return View(model);
             }
         }
@@ -64,32 +64,37 @@ public class DefaultController(HttpClient http) : Controller
     [HttpPost]
     public async Task<IActionResult> Contact(ContactUsViewModel viewModel)
     {
-        if (ModelState.IsValid)
+        try
         {
-            var formModel = new ContactFormModel
+            if (ModelState.IsValid)
             {
-                Email = viewModel.Email,
-                FullName = viewModel.FullName,
-                ServiceId = viewModel.ServiceId,
-                Message = viewModel.Message,
-            };
+                var formModel = new ContactFormModel
+                {
+                    Email = viewModel.Email,
+                    FullName = viewModel.FullName,
+                    ServiceId = viewModel.ServiceId,
+                    Message = viewModel.Message,
+                };
 
-            var content = new StringContent(JsonConvert.SerializeObject(formModel), Encoding.UTF8, "application/json");
-            //HTTP
-            var createResponse = await _http.PostAsync("http://localhost:5094/api/Contacts", content);
+                var content = new StringContent(JsonConvert.SerializeObject(formModel), Encoding.UTF8, "application/json");
+                //HTTP
+                var createResponse = await _http.PostAsync("http://localhost:5094/api/Contacts", content);
 
-            if (createResponse.IsSuccessStatusCode)
-            {
-                TempData["Status"] = "Thanks for your message, we'll get back to you as soon as possible!";
-                return RedirectToAction("Contact", viewModel);
-            }
-            else
-            {
-                TempData["Status"] = "Something went wrong :/ please try again!";
-                return View();
+                if (createResponse.IsSuccessStatusCode)
+                {
+                    TempData["StatusSuccess"] = "Thanks for your message, we'll get back to you as soon as possible!";
+                    return RedirectToAction("Contact", viewModel);
+                }
+                else
+                {
+                    TempData["StatusError"] = "Something went wrong :/ please try again!";
+                    return View();
+                }
             }
         }
+        catch { }
 
+        TempData["StatusError"] = "Something went wrong :/ please try again!";
         return View(viewModel);
     }
     #endregion

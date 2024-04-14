@@ -26,13 +26,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: column;
+        align-items: start;
+        @include lg {
+          flex-direction: row;
+        }
+
         .courses-title {
           @include title-h2;
+          margin-bottom: 2rem;
+          @include lg {
+            margin-bottom: 0;
+          }
         }
         .filters {
           display: flex;
           gap: 1.5rem;
           justify-content: end;
+          width: 100%;
           // width: 570px;
           // max-width: 35rem;
           input,
@@ -45,7 +56,9 @@
             background-repeat: no-repeat;
             background-size: 16px;
             background-position: right 1rem center;
-            max-width: 19rem;
+            @include lg {
+              max-width: 19rem;
+            }
           }
         }
       }
@@ -141,7 +154,14 @@
       background-color: var(--color-gray-100);
       border-radius: 0.5rem;
       margin: 3.5rem auto 6rem;
-      padding: 2rem 6.9rem;
+      padding: 2rem;
+      flex-direction: column-reverse;
+      @include sm {
+        flex-direction: row;
+      }
+      @include lg {
+        padding: 2rem 6.9rem;
+      }
       .skills-content {
         flex: 1;
         display: flex;

@@ -61,15 +61,22 @@
                 </div>
             </div>
             
-            <p class="tempdata-status">
-                @TempData["Status"]
-            </p>
+            @if (@TempData["StatusSuccess"] != null)
+                {
+                    <p class="contact-tempdata-status alert-success">@TempData["StatusSuccess"]</p>
+                }
+            @if (@TempData["StatusError"] != null)
+                {
+                    <p class="contact-tempdata-status alert-error">@TempData["StatusError"]</p>
+                }
 
             <div class="newsletter-input-container">
-                <input class="newsletter-input" asp-for="Email" placeholder="Your Email">
+                <div class="input-group">
+                    <input class="newsletter-input" asp-for="Email" placeholder="Your Email">
+                    <span asp-validation-for="Email"></span>
+                </div>
                 <button class="newsletter-btn" type="submit">Subscribe *</button>
             </div>
-            <span asp-validation-for="Email"></span>
             <p class="newsletter-privacy"><span>* Yes, I agree to the <a href="" class="privacy-link">terms</a> and <a href="" class="privacy-link">privacy policy</a>.</span></p>
         </form>
 

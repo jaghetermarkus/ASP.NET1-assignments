@@ -5,6 +5,18 @@
     // width: 60%;
     // max-width: 856px;
     // margin: 0 auto;
+    .newsletter-form {
+      .contact-tempdata-status {
+        border-radius: 0.25rem;
+        display: inline-block;
+        padding: 0 0.5rem;
+        margin-top: 0.25rem;
+        max-width: fit-content;
+        // color: var(--color-success);
+        font-weight: var(--font-weight-regular);
+        // background-color: rgba(34, 197, 94, 0.12);
+      }
+    }
     .newsletter-title-container {
       display: flex;
       gap: 1.5rem;
@@ -112,6 +124,9 @@
       gap: 1rem;
       @include sm {
         flex-direction: row;
+      }
+      .input-group {
+        width: 100%;
       }
       .newsletter-input {
         padding: 0.8rem 2rem 0.8rem 2.35rem;

@@ -24,6 +24,8 @@ public class ContactUsViewModel
 
     [Display(Name = "Message", Prompt = "Enter your message here...")]
     [StringLength(200, ErrorMessage = "Message cannot exceed 200 characters")]
+    [Required(ErrorMessage = "A message is required")]
+    [MinLength(2, ErrorMessage = "A valid message is required")]
     [DataType(DataType.Text)]
     public string Message { get; set; } = null!;
 

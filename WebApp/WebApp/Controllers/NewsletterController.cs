@@ -34,14 +34,16 @@ public class NewsletterController(HttpClient http) : Controller
                     var updateResponse = await _http.PutAsync("http://localhost:5027/api/Subscribers", content);
                     if (updateResponse.IsSuccessStatusCode)
                     {
-                        TempData["Status"] = "Your subscription is updated";
+                        TempData["StatusSuccess"] = "Your subscription is updated";
                         return RedirectToAction("Index", "Default", "newsletter");
                     }
                 }
             }
             catch (Exception ex) { Debug.WriteLine(ex.Message); }
-            TempData["Status"] = "Opps.. something went wrong :(";
+            TempData["StatusError"] = "Opps.. something went wrong :(";
+            return RedirectToAction("Index", "Default", "newsletter");
         }
+        TempData["StatusError"] = "Wrong input, try again!";
         return RedirectToAction("Index", "Default", "newsletter");
     }
 }

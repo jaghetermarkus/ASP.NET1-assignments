@@ -285,6 +285,10 @@
       "PackagePath": "staticwebassets/images/icon-cross.svg"
     },
     {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/icon-green-check.svg",
+      "PackagePath": "staticwebassets/images/icon-green-check.svg"
+    },
+    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/logo-solid-dark.svg",
       "PackagePath": "staticwebassets/images/logo-solid-dark.svg"
     },
@@ -387,6 +391,14 @@
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_a0463eec-d4aa-48f4-ae5a-2ceb8f9cfa08.png",
       "PackagePath": "staticwebassets/images/uploads/pImg_48844da6-a934-42fb-a4be-d84c9a726901_a0463eec-d4aa-48f4-ae5a-2ceb8f9cfa08.png"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_353239ab-5abc-4501-be38-e0997eaddc17.jpg",
+      "PackagePath": "staticwebassets/images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_353239ab-5abc-4501-be38-e0997eaddc17.jpg"
+    },
+    {
+      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_6d1a339b-fe9f-43ef-aa0a-8bd5a9369127.png",
+      "PackagePath": "staticwebassets/images/uploads/pImg_62f4bc97-2e6a-4df3-b1f8-c1d2dd1d5a28_6d1a339b-fe9f-43ef-aa0a-8bd5a9369127.png"
     },
     {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/images/uploads/pImg_7437899c-14ad-4be0-9783-81798938eb23_b667d090-eee2-408d-876d-7a9b3ba3dd41.jpg",

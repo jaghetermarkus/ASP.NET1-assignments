@@ -9,6 +9,15 @@
             <h1 class="form-title">Account Details</h1>
             <h5 class="form-sub-title">Basic Info</h5>
 
+            @if (@TempData["StatusSuccess"] != null)
+                {
+                    <p class="tempdata-status alert-success">@TempData["StatusSuccess"]</p>
+                }
+                @if (@TempData["StatusError"] != null)
+                {
+                    <p class="tempdata-status alert-error">@TempData["StatusError"]</p>
+                }
+
             <div class="input-group-container">
                 <div class="input-group">
                     <label asp-for="BasicInfo!.FirstName"></label>

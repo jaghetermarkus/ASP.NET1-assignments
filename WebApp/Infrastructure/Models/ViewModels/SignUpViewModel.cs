@@ -30,14 +30,14 @@ public class SignUpViewModel
     [Required(ErrorMessage = "A valid password is required")]
     [MinLength(8, ErrorMessage = "A minimun 8 characters is required")]
     [DataType(DataType.Password)]
-    [RegularExpression("^(?=,*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$", ErrorMessage = "Invalid password")]
+    [RegularExpression(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])(?!.*\s).{8,}$", ErrorMessage = "A valid password is required")]
     public string Password { get; set; } = null!;
 
 
     [Display(Name = "Confirm password", Prompt = "Confirm your password")]
     [Required(ErrorMessage = "Password must be confirmed")]
-    [Compare(nameof(Password), ErrorMessage = "Password don´t match")]
     [DataType(DataType.Password)]
+    [Compare(nameof(Password), ErrorMessage = "Password don´t match")]
     public string ConfirmPassword { get; set; } = null!;
 
 

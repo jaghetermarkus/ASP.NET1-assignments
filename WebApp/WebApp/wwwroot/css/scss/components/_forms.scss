@@ -237,10 +237,24 @@ form {
     // align-self: start;
     max-width: fit-content;
   }
+  .field-validation-valid {
+    position: absolute;
+    bottom: -1.55rem;
+    color: var(--color-success);
+    font-weight: var(--font-weight-regular);
+    background-color: rgba(34, 197, 94, 0.2);
+    border-radius: 0.25rem;
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-top: 0.25rem;
+    // align-self: start;
+    max-width: fit-content;
+  }
 
-  .validation-isValid {
+  .validation-isValid,
+  .input-validation-valid {
     border-color: rgba(34, 197, 94, 0.6);
-    background-image: url("/images/icon-cross.svg");
+    background-image: url("/images/icon-green-check.svg");
     background-repeat: no-repeat;
     background-position: right 1rem center;
   }
