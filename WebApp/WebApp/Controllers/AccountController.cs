@@ -155,7 +155,6 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                     if (updateResult)
                     {
                         TempData["StatusSuccess"] = "Password is successfully updated.";
-                        // return RedirectToAction("Details", "Account");
                         return View("Security", viewModel);
                     }
                 }
@@ -165,7 +164,6 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
         catch { }
 
         TempData["StatusError"] = "Something went wrong, password isn´t updated.";
-        // return RedirectToAction("Security", "Account");
         return View("Security", viewModel);
     }
     #endregion
@@ -198,12 +196,12 @@ public class AccountController(UserManager<UserEntity> userManager, AccountServi
                     return RedirectToAction("Security", "Account");
                 }
             }
-            TempData["StatusError"] = "You must confirm to delete your account";
+            TempData["DeleteStatusError"] = "You must confirm to delete your account";
             return RedirectToAction("Security", "Account");
         }
         catch { }
 
-        TempData["StatusError"] = "Something went wrong, please try again.";
+        TempData["DeleteStatusError"] = "Something went wrong, please try again.";
         return RedirectToAction("Security", "Account");
 
     }

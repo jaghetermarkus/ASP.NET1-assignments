@@ -8,9 +8,9 @@
         <form class="delete-account-form" method="post" asp-controller="Account" asp-action="DeleteAccount">
 
             <h5 class="form-sub-title">Delete account</h5>
-            @if (@TempData["StatusError"] != null)
+            @if (@TempData["DeleteStatusError"] != null)
             {
-                <p class="tempdata-status alert-error">@TempData["StatusError"]</p>
+                <p class="tempdata-status alert-error">@TempData["DeleteStatusError"]</p>
             }
 
             <p>When you delete your account, your public profile will be deactivated immediately. If you change your mind before the 14 days are up, sign in with your email and password, and we’ll send you a link to reactivate your account.</p>

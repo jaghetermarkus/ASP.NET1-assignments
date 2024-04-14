@@ -9,20 +9,17 @@
     justify-content: center;
     @include lg {
       display: flex;
-      // gap: 8rem;
     }
     @include xl {
       gap: 8rem;
     }
     .management-img-container {
-      // flex: 6.5;
       .management-img {
         width: 100%;
         height: auto;
       }
     }
     .management-content {
-      // flex: 3.5;
       margin: 0 auto;
       .management-title {
         font-size: var(--font-header-h2);

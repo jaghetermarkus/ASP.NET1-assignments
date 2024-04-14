@@ -11,9 +11,10 @@
             <h1 class="form-title">Create Account</h1>
             <p>Already have an account? <a class="sign-in-here" asp-controller="Auth" asp-action="SignIn" >Sign in here</a> </p>
 
-            <div class="alert">
-                @ViewData["StatusMessage"]
-            </div>
+            @if (@ViewData["StatusError"] != null)
+            {
+                <p class="tempdata-status alert-error">@ViewData["StatusError"]</p>
+            }
 
             <div class="input-group-container">
                 <div class="input-group">

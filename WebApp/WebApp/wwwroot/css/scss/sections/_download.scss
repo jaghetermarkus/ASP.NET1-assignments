@@ -32,7 +32,6 @@
         @include title-h2;
         text-align: center;
         @include md {
-          // font-size: var(--font-header-h2);
           text-align: start;
         }
       }
@@ -86,8 +85,6 @@
           .card-image-container {
             display: flex;
             align-items: end;
-            .card-image {
-            }
           }
         }
       }

@@ -48,6 +48,8 @@
             </div>
 
             <div class="contact-form-container">
+                <form method="post" asp-controller="Default" asp-action="Contact" >
+                    <h3 class="contact-form-title">Get In Contact With Us</h3>
                     @if (@TempData["StatusSuccess"] != null)
                     {
                         <p class="tempdata-status alert-success">@TempData["StatusSuccess"]</p>
@@ -56,8 +58,6 @@
                     {
                         <p class="tempdata-status alert-error">@TempData["StatusError"]</p>
                     }
-                <form method="post" asp-controller="Default" asp-action="Contact" >
-                    <h3 class="contact-form-title">Get In Contact With Us</h3>
                     <div class="input-group">
                         <label asp-for="FullName"></label>
                         <input asp-for="FullName">

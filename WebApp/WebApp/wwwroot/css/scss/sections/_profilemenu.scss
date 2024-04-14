@@ -1,11 +1,6 @@
 .profile-menu {
   background-color: var(--color-gray-000);
   .container-profile-menu {
-    // @include sm {
-    //   display: flex;
-    //   flex-direction: row;
-    //   margin: 0;
-    // }
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -23,10 +18,7 @@
       flex-direction: column;
       align-items: center;
       .image-box {
-        // padding-top: 2.5rem;
         position: relative;
-        // width: fit-content;
-        // height: fit-content;
         max-width: 120px;
         max-height: 120px;
         aspect-ratio: 1;
@@ -81,9 +73,6 @@
             color: var(--color-gray-600);
             margin-right: 0.75rem;
           }
-        }
-        .fa-arrow-right-from-bracket {
-          //   rotate: 180deg;
         }
         &.active {
           background-color: var(--color-theme);

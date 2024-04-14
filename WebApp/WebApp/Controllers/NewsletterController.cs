@@ -26,7 +26,7 @@ public class NewsletterController(HttpClient http) : Controller
                 // var response = await _http.PostAsync("https://localhost:7186/api/Subscribers", content);
                 if (createResponse.IsSuccessStatusCode)
                 {
-                    TempData["Status"] = "Welcome to the subscribelist!";
+                    TempData["StatusSuccess"] = "Welcome to the subscribe list!";
                     return RedirectToAction("Index", "Default", "newsletter");
                 }
                 else if (createResponse.StatusCode == System.Net.HttpStatusCode.Conflict)

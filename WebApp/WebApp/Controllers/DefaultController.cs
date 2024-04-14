@@ -52,7 +52,6 @@ public class DefaultController(HttpClient http) : Controller
                 {
                     Services = services
                 };
-                TempData["StatusSuccess"] = "Thanks for your message, we'll get back to you as soon as possible!";
                 return View(model);
             }
         }
@@ -80,6 +79,9 @@ public class DefaultController(HttpClient http) : Controller
                 //HTTP
                 var createResponse = await _http.PostAsync("http://localhost:5094/api/Contacts", content);
 
+                //HTTPS
+                // var createResponse = await _http.PostAsync("https://localhost:7212/api/Contacts", content);
+
                 if (createResponse.IsSuccessStatusCode)
                 {
                     TempData["StatusSuccess"] = "Thanks for your message, we'll get back to you as soon as possible!";
@@ -91,6 +93,7 @@ public class DefaultController(HttpClient http) : Controller
                     return View();
                 }
             }
+            return View(viewModel);
         }
         catch { }
 

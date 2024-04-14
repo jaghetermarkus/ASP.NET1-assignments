@@ -16,10 +16,6 @@
     outline: none;
     @include glow-input;
   }
-
-  //   &::selection {
-  //     border-color: rgba(99, 102, 241, 0.35);
-  //   }
 }
 
 @mixin checkbox {
@@ -184,7 +180,6 @@ form {
       top: 100%;
       left: 0;
       right: 0;
-      // padding: 0.8rem 2rem 0.8rem 1rem;
       width: 100%;
       border-radius: 0.5rem;
       font-family: var(--font-manrope);
@@ -234,7 +229,6 @@ form {
     display: inline-block;
     padding: 0 0.5rem;
     margin-top: 0.25rem;
-    // align-self: start;
     max-width: fit-content;
   }
   .field-validation-valid {
@@ -247,7 +241,6 @@ form {
     display: inline-block;
     padding: 0 0.5rem;
     margin-top: 0.25rem;
-    // align-self: start;
     max-width: fit-content;
   }
 
@@ -261,7 +254,6 @@ form {
 
   .btn-theme {
     @include button-theme;
-    // max-width: fit-content;
     font-weight: var(--font-weight-medium);
     font-size: var(--font-body-s);
 
@@ -276,12 +268,10 @@ form {
     @include button-gray;
     background-color: var(--color-gray-200);
     color: var(--color-gray-800);
-    // max-width: fit-content;
     font-weight: var(--font-weight-medium);
     font-size: var(--font-body-s);
 
     &:hover {
-      // @include button-standard-hover;
       @include glow-gray;
       cursor: pointer;
     }

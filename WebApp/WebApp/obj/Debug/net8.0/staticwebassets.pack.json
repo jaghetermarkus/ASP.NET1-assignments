@@ -129,10 +129,6 @@
       "PackagePath": "staticwebassets/css/scss/sections/_singlecourse.scss"
     },
     {
-      "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_testsection.scss",
-      "PackagePath": "staticwebassets/css/scss/sections/_testsection.scss"
-    },
-    {
       "Id": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_theme.scss",
       "PackagePath": "staticwebassets/css/scss/sections/_theme.scss"
     },

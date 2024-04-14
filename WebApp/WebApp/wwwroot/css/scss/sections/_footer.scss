@@ -1,7 +1,5 @@
 footer {
   .container-small {
-    // width: 60%;
-    // max-width: 856px;
     margin: 3.3rem auto 4rem;
     display: grid;
     .social-media {
@@ -30,8 +28,6 @@ footer {
     .copyright {
       text-align: center;
       color: var(--color-gray-600);
-      span {
-      }
     }
   }
 }

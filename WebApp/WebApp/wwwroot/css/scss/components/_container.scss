@@ -1,44 +1,12 @@
 .container-form-small {
   width: 90%;
   max-width: 526px;
-  // padding-right: 15px;
-  // padding-left: 15px;
   margin: 8.5rem auto;
-
-  // @include sm {
-  //   max-width: 540px;
-  //   max-width: 80%;
-  // }
-
-  // @include md {
-  //   max-width: 720px;
-  //   max-width: 80%;
-  // }
-
-  // @include lg {
-  //   max-width: 856px;
-  // }
 }
 .container-form {
   width: 100%;
   max-width: 856px;
-  // padding-right: 15px;
-  // padding-left: 15px;
   margin: 2.5rem 0;
-
-  // @include sm {
-  //   max-width: 540px;
-  //   max-width: 80%;
-  // }
-
-  // @include md {
-  //   max-width: 720px;
-  //   max-width: 80%;
-  // }
-
-  // @include lg {
-  //   max-width: 856px;
-  // }
 }
 
 .container-small {
@@ -72,7 +40,6 @@
 
   @include sm {
     max-width: 95%;
-    // max-width: 540px;
   }
 
   @include md {
@@ -104,7 +71,6 @@
 
   @include sm {
     max-width: 95%;
-    // max-width: 540px;
   }
 
   @include md {
@@ -137,7 +103,6 @@
 
   @include sm {
     max-width: 95%;
-    // max-width: 540px;
   }
 
   @include md {

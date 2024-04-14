@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    //   width: 80%;
     margin: 0 auto;
     padding-top: 5.9rem;
     padding-bottom: 6.1rem;
@@ -46,10 +45,6 @@
           cursor: pointer;
           border-radius: 0.5rem;
           box-shadow: 0 0 10px var(--color-gray-200);
-        }
-        .icon {
-          img {
-          }
         }
         .work-tools-description {
           font-size: var(--font-body-m);

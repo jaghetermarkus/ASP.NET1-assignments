@@ -72,12 +72,12 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
                 }
                 else
                 {
-                    ViewData["ErrorMessage"] = "Something went wrong, please try again.";
+                    ViewData["StatusError"] = "Something went wrong, please try again.";
                 }
             }
             else
             {
-                ViewData["ErrorMessage"] = "User with this email already exists.";
+                ViewData["StatusError"] = "User with this email already exists.";
             }
         }
 

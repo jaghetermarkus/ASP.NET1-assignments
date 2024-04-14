@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "m3soqh/KRhLSd9t7aCHstl8t3RmEQV4TFLTuH/QyHwY=",
+  "Hash": "yFXYbZOglxSx26KQYelddDHDNaok+zo2VpAbSvWPGaY=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -1763,25 +1763,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/scss/sections/_singlecourse.scss"
-    },
-    {
-      "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_testsection.scss",
-      "SourceId": "WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/",
-      "BasePath": "_content/WebApp",
-      "RelativePath": "css/scss/sections/_testsection.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/scss/sections/_testsection.scss"
     },
     {
       "Identity": "/Users/markuskarlsson/Nackademin/ASP.NET1/assignments/WebApp/WebApp/wwwroot/css/scss/sections/_theme.scss",

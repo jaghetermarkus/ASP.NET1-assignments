@@ -2,9 +2,6 @@
   background-color: var(--color-gray-100);
   padding: 5.9rem 0 7.3rem;
   .container-small {
-    // width: 60%;
-    // max-width: 856px;
-    // margin: 0 auto;
     .newsletter-form {
       .contact-tempdata-status {
         border-radius: 0.25rem;
@@ -12,9 +9,7 @@
         padding: 0 0.5rem;
         margin-top: 0.25rem;
         max-width: fit-content;
-        // color: var(--color-success);
         font-weight: var(--font-weight-regular);
-        // background-color: rgba(34, 197, 94, 0.12);
       }
     }
     .newsletter-title-container {
@@ -36,9 +31,6 @@
       margin: 1.7rem 0 3rem;
       @include md {
         flex-direction: row;
-      }
-      .checkbox-title {
-        // max-width: 200px;
       }
       .checkbox-div {
         width: 100%;

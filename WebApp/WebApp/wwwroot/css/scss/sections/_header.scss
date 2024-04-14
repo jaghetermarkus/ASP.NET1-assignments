@@ -168,7 +168,6 @@ header {
         color: var(--color-gray-800);
         background-color: var(--color-gray-200);
         &:hover {
-          // @include button-standard-hover;
           @include glow-gray;
         }
         i {
@@ -177,8 +176,6 @@ header {
       }
       .btn-theme {
         @include button-theme;
-        // color: white;
-        // background-color: var(--color-theme);
         &:hover {
           @include button-standard-hover;
           @include glow;
@@ -212,20 +209,7 @@ header {
     height: 100%;
     position: fixed;
     z-index: 20;
-
-    // height: fit-content;
-    // max-height: 2000px;
-    // transition: max-height 1.5s ease-in-out;
-    // max-height: auto;
-    // transform: translateY(0);
-    // transform: translateX(0);
-    // transition: max-height 1s ease-in-out;
-
-    // transform: scaleY(1);
-
     .container {
-      // grid-template-rows: 1fr;
-      // grid-template-areas: "mobile nav accounts";
       display: flex;
       height: 100%;
       flex-direction: column;
@@ -235,13 +219,9 @@ header {
 
       .burger-menu {
         color: var(--color-gray-800);
-        // grid-area: mobile;
         display: initial;
         align-self: flex-end;
         order: -2;
-        // position: absolute;
-        // top: 16px;
-        // right: 13px;
       }
       .btn-switch {
         grid-area: switch;
